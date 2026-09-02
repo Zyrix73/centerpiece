@@ -133,9 +133,9 @@ const FLAVOR_PILL_CLASSES =
 type SectionId = 'food' | 'drinks' | 'hookah';
 
 const SECTIONS: { id: SectionId; label: string; icon: typeof Flame }[] = [
-  { id: 'food', label: 'Food & Snacks', icon: UtensilsCrossed },
   { id: 'drinks', label: 'Drinks & Tea', icon: Coffee },
   { id: 'hookah', label: 'Build My Hookah', icon: Flame },
+  { id: 'food', label: 'Food & Snacks', icon: UtensilsCrossed },
 ];
 
 function FeaturedBadge({ label }: { label: string }) {
@@ -171,7 +171,7 @@ function useInView(threshold = 0.15) {
 }
 
 export default function MenuPage() {
-  const [activeSection, setActiveSection] = useState<SectionId>('food');
+  const [activeSection, setActiveSection] = useState<SectionId>('drinks');
   const sectionRefs = useRef<Record<SectionId, HTMLElement | null>>({
     food: null,
     drinks: null,
@@ -310,83 +310,6 @@ export default function MenuPage() {
               </div>
             </div>
 
-            {/* Food & Snacks */}
-            <div
-              ref={(el) => { sectionRefs.current.food = el; }}
-              data-section="food"
-              className="scroll-mt-24 mb-16"
-            >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="flex-1 h-px bg-gradient-to-l from-amber-700/40 to-transparent" aria-hidden="true" />
-                <h2 className="font-serif text-2xl text-amber-200 text-center px-4">Food & Snacks</h2>
-                <div className="flex-1 h-px bg-gradient-to-r from-amber-700/40 to-transparent" aria-hidden="true" />
-              </div>
-              {FOOD.length === 0 ? (
-                <EmptyState message="Food menu coming soon." />
-              ) : (
-                <div className="space-y-7">
-                  {FOOD_BY_CATEGORY.map((group) => (
-                    <div key={group.category}>
-                      <div className="flex items-center gap-4 mb-6">
-                        <h3 className="font-serif text-xl text-amber-400/80">{group.category}</h3>
-                        <div className="flex-1 h-px bg-gradient-to-r from-amber-700/30 to-transparent" aria-hidden="true" />
-                      </div>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {group.items.map((item, i) => (
-                          <article
-                            key={item.name}
-                            className={`group relative p-0 border rounded-sm transition-all duration-500 shadow-sm overflow-hidden flex flex-col ${
-                              item.featured
-                                ? 'border-amber-500/50 bg-[#1e150f]/80'
-                                : 'border-amber-900/25 hover:border-amber-700/50 bg-[#1a1210]/60 hover:bg-[#1e150f]/80'
-                            }`}
-                            style={{ transitionDelay: `${i * 40}ms` }}
-                          >
-                            {item.featured && <FeaturedBadge label="Guest Favorite" />}
-                            {item.image_url ? (
-                              <div className="relative w-full aspect-[4/3] overflow-hidden bg-[#1a1210]">
-                                <img
-                                  src={item.image_url}
-                                  alt={item.name}
-                                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                  loading="lazy"
-                                />
-                              </div>
-                            ) : (
-                              <div className="relative w-full aspect-[4/3] overflow-hidden bg-gradient-to-br from-[#1a1210] to-[#241814] flex items-center justify-center">
-                                <ImagePlus size={32} className="text-amber-700/30" aria-hidden="true" />
-                              </div>
-                            )}
-                            <div className="flex items-start justify-between gap-4 p-5 flex-1">
-                              <div className="flex-1">
-                                <h3 className="font-serif text-lg text-amber-100 group-hover:text-amber-50 transition-colors mb-1">{item.name}</h3>
-                                {item.desc && <p className="text-sand-400 text-sm leading-relaxed">{item.desc}</p>}
-                              </div>
-                              {item.sizes.length > 1 ? (
-                                <div className="flex items-center gap-3 flex-shrink-0">
-                                  {item.sizes.map((size, si) => (
-                                    <span key={size.label} className="flex items-center gap-3">
-                                      {si > 0 && <span className="w-px h-8 bg-amber-700/40" aria-hidden="true" />}
-                                      <span className="flex flex-col items-end">
-                                        <span className="text-[10px] tracking-widest uppercase text-amber-300/70">{size.label}</span>
-                                        <span className="text-amber-400 font-serif text-lg font-bold">${size.price.replace(/\$/g, '')}</span>
-                                      </span>
-                                    </span>
-                                  ))}
-                                </div>
-                              ) : (
-                                <span className="text-amber-400 font-serif text-lg font-bold flex-shrink-0">${item.sizes[0].price.replace(/\$/g, '')}</span>
-                              )}
-                            </div>
-                          </article>
-                        ))}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-
             {/* Drinks & Tea */}
             <div
               ref={(el) => { sectionRefs.current.drinks = el; }}
@@ -504,7 +427,7 @@ export default function MenuPage() {
             <div
               ref={(el) => { sectionRefs.current.hookah = el; }}
               data-section="hookah"
-              className="scroll-mt-24"
+              className="scroll-mt-24 mb-16"
             >
               <div className="space-y-7">
                 <div className="flex items-center gap-4 mb-8">
@@ -569,6 +492,83 @@ export default function MenuPage() {
                   </>
                 )}
               </div>
+            </div>
+
+            {/* Food & Snacks */}
+            <div
+              ref={(el) => { sectionRefs.current.food = el; }}
+              data-section="food"
+              className="scroll-mt-24"
+            >
+              <div className="flex items-center gap-4 mb-6">
+                <div className="flex-1 h-px bg-gradient-to-l from-amber-700/40 to-transparent" aria-hidden="true" />
+                <h2 className="font-serif text-2xl text-amber-200 text-center px-4">Food & Snacks</h2>
+                <div className="flex-1 h-px bg-gradient-to-r from-amber-700/40 to-transparent" aria-hidden="true" />
+              </div>
+              {FOOD.length === 0 ? (
+                <EmptyState message="Food menu coming soon." />
+              ) : (
+                <div className="space-y-7">
+                  {FOOD_BY_CATEGORY.map((group) => (
+                    <div key={group.category}>
+                      <div className="flex items-center gap-4 mb-6">
+                        <h3 className="font-serif text-xl text-amber-400/80">{group.category}</h3>
+                        <div className="flex-1 h-px bg-gradient-to-r from-amber-700/30 to-transparent" aria-hidden="true" />
+                      </div>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {group.items.map((item, i) => (
+                          <article
+                            key={item.name}
+                            className={`group relative p-0 border rounded-sm transition-all duration-500 shadow-sm overflow-hidden flex flex-col ${
+                              item.featured
+                                ? 'border-amber-500/50 bg-[#1e150f]/80'
+                                : 'border-amber-900/25 hover:border-amber-700/50 bg-[#1a1210]/60 hover:bg-[#1e150f]/80'
+                            }`}
+                            style={{ transitionDelay: `${i * 40}ms` }}
+                          >
+                            {item.featured && <FeaturedBadge label="Guest Favorite" />}
+                            {item.image_url ? (
+                              <div className="relative w-full aspect-[4/3] overflow-hidden bg-[#1a1210]">
+                                <img
+                                  src={item.image_url}
+                                  alt={item.name}
+                                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                  loading="lazy"
+                                />
+                              </div>
+                            ) : (
+                              <div className="relative w-full aspect-[4/3] overflow-hidden bg-gradient-to-br from-[#1a1210] to-[#241814] flex items-center justify-center">
+                                <ImagePlus size={32} className="text-amber-700/30" aria-hidden="true" />
+                              </div>
+                            )}
+                            <div className="flex items-start justify-between gap-4 p-5 flex-1">
+                              <div className="flex-1">
+                                <h3 className="font-serif text-lg text-amber-100 group-hover:text-amber-50 transition-colors mb-1">{item.name}</h3>
+                                {item.desc && <p className="text-sand-400 text-sm leading-relaxed">{item.desc}</p>}
+                              </div>
+                              {item.sizes.length > 1 ? (
+                                <div className="flex items-center gap-3 flex-shrink-0">
+                                  {item.sizes.map((size, si) => (
+                                    <span key={size.label} className="flex items-center gap-3">
+                                      {si > 0 && <span className="w-px h-8 bg-amber-700/40" aria-hidden="true" />}
+                                      <span className="flex flex-col items-end">
+                                        <span className="text-[10px] tracking-widest uppercase text-amber-300/70">{size.label}</span>
+                                        <span className="text-amber-400 font-serif text-lg font-bold">${size.price.replace(/\$/g, '')}</span>
+                                      </span>
+                                    </span>
+                                  ))}
+                                </div>
+                              ) : (
+                                <span className="text-amber-400 font-serif text-lg font-bold flex-shrink-0">${item.sizes[0].price.replace(/\$/g, '')}</span>
+                              )}
+                            </div>
+                          </article>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
 
             {/* PDF download */}
