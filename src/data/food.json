@@ -1,0 +1,109 @@
+{
+  "count": 13,
+  "foods": [
+    {
+      "name": "Golden Chicken Chunks - Small",
+      "desc": "",
+      "price": "$12",
+      "category": "Small Bites",
+      "featured": false,
+      "image_url": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/Menu/Chicken-chunks.png"
+    },
+    {
+      "name": "Golden Chicken Chunks - Large",
+      "desc": "",
+      "price": "$16",
+      "category": "Small Bites",
+      "featured": false,
+      "image_url": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/Menu/Chicken-chunks.png"
+    },
+    {
+      "name": "Crispy Chicken Wings - Small",
+      "desc": "",
+      "price": "$14",
+      "category": "Small Bites",
+      "featured": false,
+      "image_url": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/Menu/Chicken%20wings.webp"
+    },
+    {
+      "name": "Crispy Chicken Wings - Large",
+      "desc": "",
+      "price": "$19",
+      "category": "Small Bites",
+      "featured": false,
+      "image_url": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/Menu/Chicken%20wings.webp"
+    },
+    {
+      "name": "Chicken Strips - Large",
+      "desc": "",
+      "price": "$19",
+      "category": "Small Bites",
+      "featured": false,
+      "image_url": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/Menu/Chicken%20Strips.webp"
+    },
+    {
+      "name": "Crispy Onion Rings",
+      "desc": "",
+      "price": "$12",
+      "category": "Small Bites",
+      "featured": false,
+      "image_url": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/Menu/onion%20rings.png"
+    },
+    {
+      "name": "Golden French Fries",
+      "desc": "",
+      "price": "$10",
+      "category": "Small Bites",
+      "featured": false,
+      "image_url": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/Menu/French-Fries.png"
+    },
+    {
+      "name": "Veggie Pizza",
+      "desc": "",
+      "price": "$19",
+      "category": "Small Bites",
+      "featured": false,
+      "image_url": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/Menu/veggie-pizza.png"
+    },
+    {
+      "name": "Pepporoni Pizza",
+      "desc": "",
+      "price": "$19",
+      "category": "Small Bites",
+      "featured": false,
+      "image_url": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/Menu/pepporoni-pizza.png"
+    },
+    {
+      "name": "Cheese Pizza",
+      "desc": "",
+      "price": "$19",
+      "category": "Small Bites",
+      "featured": false,
+      "image_url": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/Menu/cheese-pizz.png"
+    },
+    {
+      "name": "Veggie Spring Rolls",
+      "desc": "",
+      "price": "$15",
+      "category": "Small Bites",
+      "featured": false,
+      "image_url": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/Menu/spring-rolls.webp"
+    },
+    {
+      "name": "Baklava Assortment",
+      "desc": "",
+      "price": "$8",
+      "category": "Dessert",
+      "featured": false,
+      "image_url": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/Menu/baklava.webp"
+    },
+    {
+      "name": "Italian Tiramisu",
+      "desc": "",
+      "price": "$5",
+      "category": "Dessert",
+      "featured": false,
+      "image_url": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/Menu/tiramisu.webp"
+    }
+  ]
+}

@@ -1,0 +1,400 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #1a1210;
+    color: #f9efd8;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Promote animated elements to GPU layers */
+  .flicker-a, .flicker-b, .flicker-c,
+  .lantern-flicker,
+  .animate-smoke, .animate-float {
+    will-change: opacity;
+  }
+}
+
+@layer utilities {
+  .text-shadow-gold {
+    text-shadow: 0 0 40px rgba(201, 168, 76, 0.5), 0 2px 8px rgba(0,0,0,0.8);
+  }
+
+  .text-shadow-sm {
+    text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+  }
+
+  .border-ornate {
+    border-image: linear-gradient(90deg, transparent, #c9a84c, transparent) 1;
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 30px rgba(201, 168, 76, 0.3), 0 0 60px rgba(201, 168, 76, 0.1);
+  }
+
+  .glow-teal {
+    box-shadow: 0 0 30px rgba(13, 148, 136, 0.3), 0 0 60px rgba(13, 148, 136, 0.1);
+  }
+}
+
+/* Balinese lantern shimmer overlay */
+.lantern-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 30% 20%, rgba(251, 191, 36, 0.08) 0%, transparent 60%),
+              radial-gradient(ellipse at 70% 80%, rgba(13, 148, 136, 0.06) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Flickering light blobs */
+@keyframes flicker-a {
+  0%,100% { opacity: 0.55; transform: scale(1); }
+  8%       { opacity: 0.30; transform: scale(0.97); }
+  12%      { opacity: 0.60; transform: scale(1.01); }
+  19%      { opacity: 0.25; transform: scale(0.98); }
+  22%      { opacity: 0.55; transform: scale(1); }
+  47%      { opacity: 0.50; }
+  52%      { opacity: 0.18; transform: scale(0.96); }
+  55%      { opacity: 0.55; }
+  73%      { opacity: 0.45; }
+  77%      { opacity: 0.20; transform: scale(0.97); }
+  82%      { opacity: 0.55; transform: scale(1); }
+}
+@keyframes flicker-b {
+  0%,100% { opacity: 0.45; transform: scale(1); }
+  14%      { opacity: 0.60; transform: scale(1.03); }
+  20%      { opacity: 0.20; transform: scale(0.96); }
+  24%      { opacity: 0.50; transform: scale(1); }
+  60%      { opacity: 0.40; }
+  64%      { opacity: 0.15; transform: scale(0.95); }
+  68%      { opacity: 0.50; transform: scale(1); }
+  85%      { opacity: 0.55; }
+  90%      { opacity: 0.22; }
+  94%      { opacity: 0.50; }
+}
+@keyframes flicker-c {
+  0%,100% { opacity: 0.35; }
+  5%       { opacity: 0.50; }
+  9%       { opacity: 0.18; }
+  13%      { opacity: 0.40; }
+  38%      { opacity: 0.30; }
+  43%      { opacity: 0.12; }
+  47%      { opacity: 0.40; }
+  70%      { opacity: 0.45; }
+  75%      { opacity: 0.15; }
+  79%      { opacity: 0.40; }
+}
+/* Title text glow flicker */
+@keyframes glow-flicker {
+  0%,100% { text-shadow: 0 0 60px rgba(251,191,36,0.30), 0 0 120px rgba(251,191,36,0.12), 0 2px 4px rgba(0,0,0,0.6); }
+  8%       { text-shadow: 0 0 20px rgba(251,191,36,0.10), 0 2px 4px rgba(0,0,0,0.6); }
+  12%      { text-shadow: 0 0 80px rgba(251,191,36,0.50), 0 0 160px rgba(251,191,36,0.20), 0 2px 4px rgba(0,0,0,0.6); }
+  19%      { text-shadow: 0 0 15px rgba(251,191,36,0.08), 0 2px 4px rgba(0,0,0,0.6); }
+  22%      { text-shadow: 0 0 60px rgba(251,191,36,0.30), 0 0 120px rgba(251,191,36,0.12), 0 2px 4px rgba(0,0,0,0.6); }
+  52%      { text-shadow: 0 0 10px rgba(251,191,36,0.06), 0 2px 4px rgba(0,0,0,0.6); }
+  55%      { text-shadow: 0 0 70px rgba(251,191,36,0.35), 0 0 130px rgba(251,191,36,0.15), 0 2px 4px rgba(0,0,0,0.6); }
+  77%      { text-shadow: 0 0 12px rgba(251,191,36,0.07), 0 2px 4px rgba(0,0,0,0.6); }
+  82%      { text-shadow: 0 0 60px rgba(251,191,36,0.30), 0 0 120px rgba(251,191,36,0.12), 0 2px 4px rgba(0,0,0,0.6); }
+}
+
+@keyframes neon-breathe {
+  0%, 100% {
+    opacity: 0.92;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.neon-breathe {
+  animation: neon-breathe 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 12px rgba(251,191,36,0.25));
+}
+
+.hero-title-flicker {
+  animation: glow-flicker 6s ease-in-out infinite;
+}
+.flicker-a { animation: flicker-a 5.2s ease-in-out infinite; }
+.flicker-b { animation: flicker-b 7.1s ease-in-out infinite; }
+.flicker-c { animation: flicker-c 4.4s ease-in-out infinite; }
+
+@keyframes lantern-flicker {
+  0%,100% { opacity: 0.135; transform: scale(1)    translateZ(0); }
+  7%       { opacity: 0.08;  transform: scale(0.98) translateZ(0); }
+  11%      { opacity: 0.155; transform: scale(1.01) translateZ(0); }
+  18%      { opacity: 0.065; transform: scale(0.97) translateZ(0); }
+  21%      { opacity: 0.135; transform: scale(1)    translateZ(0); }
+  50%      { opacity: 0.120; }
+  54%      { opacity: 0.055; transform: scale(0.97) translateZ(0); }
+  57%      { opacity: 0.135; }
+  74%      { opacity: 0.110; }
+  78%      { opacity: 0.060; transform: scale(0.98) translateZ(0); }
+  83%      { opacity: 0.135; transform: scale(1)    translateZ(0); }
+}
+.lantern-flicker { animation: lantern-flicker 6.3s ease-in-out infinite; }
+
+@keyframes lantern-sway {
+  0%, 100% { transform: rotate(-3.5deg); }
+  50%       { transform: rotate(3.5deg); }
+}
+
+@keyframes small-lantern-flicker {
+  0%,100% { opacity: 0.92; }
+  12%      { opacity: 0.68; }
+  16%      { opacity: 0.95; }
+  44%      { opacity: 0.86; }
+  48%      { opacity: 0.62; }
+  52%      { opacity: 0.92; }
+  80%      { opacity: 0.78; }
+  84%      { opacity: 0.58; }
+  88%      { opacity: 0.90; }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1210;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c9a84c;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e8bc72;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer-slide {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes promo-shimmer {
+  0% { transform: translateX(-150%) skewX(-20deg); }
+  100% { transform: translateX(250%) skewX(-20deg); }
+}
+
+@keyframes banner-shimmer {
+  0% { transform: translateX(-200%) skewX(-18deg); }
+  100% { transform: translateX(300%) skewX(-18deg); }
+}
+
+@keyframes banner-glow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.happy-hour-banner {
+  background: linear-gradient(90deg, #1a1210, #3d2a14, #5c3d1a, #3d2a14, #1a1210);
+  background-size: 200% 100%;
+  animation: banner-glow 3s ease-in-out infinite;
+}
+
+.happy-hour-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.25) 48%,
+    rgba(255, 255, 255, 0.45) 50%,
+    rgba(255, 255, 255, 0.25) 52%,
+    transparent 65%
+  );
+  width: 40%;
+  animation: banner-shimmer 2.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes promo-glow-pulse {
+  0%, 100% { box-shadow: 0 0 12px rgba(251,191,36,0.25), 0 0 24px rgba(251,191,36,0.10); }
+  50% { box-shadow: 0 0 20px rgba(251,191,36,0.45), 0 0 40px rgba(251,191,36,0.20); }
+}
+
+.promo-shimmer-card {
+  animation: promo-glow-pulse 2.5s ease-in-out infinite;
+}
+
+.promo-shimmer-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.18) 45%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0.18) 55%,
+    transparent 70%
+  );
+  width: 60%;
+  height: 100%;
+  animation: promo-shimmer 2.8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Happy hour card — shimmer + sparkle for mobile attention */
+@keyframes hh-shimmer {
+  0% { transform: translateX(-160%) skewX(-18deg); }
+  100% { transform: translateX(260%) skewX(-18deg); }
+}
+
+@keyframes hh-glow-pulse {
+  0%, 100% { box-shadow: 0 0 18px rgba(201,168,76,0.18), 0 0 36px rgba(201,168,76,0.08); }
+  50% { box-shadow: 0 0 28px rgba(201,168,76,0.40), 0 0 60px rgba(201,168,76,0.18); }
+}
+
+@keyframes hh-sparkle {
+  0%, 100% { opacity: 0; transform: scale(0.4) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1) rotate(90deg); }
+}
+
+.hh-sparkle-card {
+  position: relative;
+  animation: hh-glow-pulse 2.6s ease-in-out infinite;
+}
+
+.hh-sparkle-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  overflow: hidden;
+  background: linear-gradient(
+    105deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.20) 45%,
+    rgba(255, 255, 255, 0.45) 50%,
+    rgba(255, 255, 255, 0.20) 55%,
+    transparent 70%
+  );
+  width: 55%;
+  height: 100%;
+  animation: hh-shimmer 2.4s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hh-sparkle-card .hh-sparkle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  pointer-events: none;
+  z-index: 2;
+  background: radial-gradient(circle, rgba(255, 240, 200, 0.95) 0%, rgba(255, 240, 200, 0) 70%);
+  border-radius: 50%;
+  animation: hh-sparkle 1.8s ease-in-out infinite;
+}
+
+.hh-sparkle-card .hh-sparkle.s1 { top: 14%; left: 18%; animation-delay: 0s; }
+.hh-sparkle-card .hh-sparkle.s2 { top: 70%; left: 82%; animation-delay: 0.4s; }
+.hh-sparkle-card .hh-sparkle.s3 { top: 40%; left: 90%; animation-delay: 0.8s; }
+.hh-sparkle-card .hh-sparkle.s4 { top: 82%; left: 12%; animation-delay: 1.2s; }
+.hh-sparkle-card .hh-sparkle.s5 { top: 24%; left: 72%; animation-delay: 1.6s; }
+
+@media (min-width: 768px) {
+  .hh-sparkle-card,
+  .hh-sparkle-card::before,
+  .hh-sparkle-card .hh-sparkle {
+    animation: none !important;
+  }
+  .hh-sparkle-card::before,
+  .hh-sparkle-card .hh-sparkle {
+    display: none !important;
+  }
+}
+
+/* After-hours menu button — lounge/club effect */
+@keyframes after-hours-pulse {
+  0%, 100% {
+    box-shadow:
+      0 0 12px rgba(201, 168, 76, 0.35),
+      0 0 24px rgba(201, 168, 76, 0.15),
+      inset 0 0 12px rgba(201, 168, 76, 0.08);
+  }
+  50% {
+    box-shadow:
+      0 0 28px rgba(201, 168, 76, 0.65),
+      0 0 56px rgba(201, 168, 76, 0.30),
+      inset 0 0 20px rgba(201, 168, 76, 0.15);
+  }
+}
+
+@keyframes after-hours-border {
+  0% { border-color: rgba(201, 168, 76, 0.8); }
+  33% { border-color: rgba(255, 180, 80, 0.9); }
+  66% { border-color: rgba(220, 140, 50, 0.7); }
+  100% { border-color: rgba(201, 168, 76, 0.8); }
+}
+
+@keyframes after-hours-shimmer {
+  0% { transform: translateX(-180%) skewX(-18deg); }
+  100% { transform: translateX(280%) skewX(-18deg); }
+}
+
+@keyframes after-hours-text {
+  0%, 100% { text-shadow: 0 0 8px rgba(201, 168, 76, 0.4), 0 0 16px rgba(201, 168, 76, 0.15); }
+  50% { text-shadow: 0 0 14px rgba(255, 200, 100, 0.7), 0 0 28px rgba(255, 180, 80, 0.3); }
+}
+
+.after-hours-btn {
+  animation: after-hours-pulse 2.2s ease-in-out infinite, after-hours-border 3s linear infinite;
+  position: relative;
+}
+
+.after-hours-btn .after-hours-label {
+  animation: after-hours-text 2.2s ease-in-out infinite;
+}
+
+.after-hours-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    105deg,
+    transparent 30%,
+    rgba(255, 220, 140, 0.25) 45%,
+    rgba(255, 240, 180, 0.45) 50%,
+    rgba(255, 220, 140, 0.25) 55%,
+    transparent 70%
+  );
+  width: 50%;
+  height: 100%;
+  animation: after-hours-shimmer 2.6s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .after-hours-btn,
+  .after-hours-btn .after-hours-label,
+  .after-hours-btn::after {
+    animation: none !important;
+  }
+}

@@ -1,0 +1,8 @@
+name = "centerpiece-mixes"
+main = "src/worker.ts"
+compatibility_date = "2024-09-23"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "centerpiece-db"
+database_id = "4c4798e8-1d86-4105-92fa-8fcee7944d6b"

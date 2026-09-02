@@ -1,0 +1,293 @@
+{
+  "count": 32,
+  "drinks": [
+    {
+      "name": "Turkish Coffee",
+      "desc": "Rich, bold coffee with a smooth foam and traditional Turkish flavor.",
+      "price": "6",
+      "type": "Hot Drink",
+      "category": "Coffee",
+      "featured": true,
+      "image_url": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/Menu/turkish-coffee%20(2).webp"
+    },
+    {
+      "name": "Water",
+      "desc": "",
+      "price": "2",
+      "type": "Cold Drink",
+      "category": "H2Oooh!",
+      "featured": false,
+      "image_url": null
+    },
+    {
+      "name": "Fiji Water",
+      "desc": "",
+      "price": "4",
+      "type": "Cold Drink",
+      "category": "H2Oooh!",
+      "featured": false,
+      "image_url": null
+    },
+    {
+      "name": "Sparkling Water",
+      "desc": "",
+      "price": "5",
+      "type": "Cold Drink",
+      "category": "H2Oooh!",
+      "featured": false,
+      "image_url": null
+    },
+    {
+      "name": "Coconut Water",
+      "desc": "",
+      "price": "5",
+      "type": "Cold Drink",
+      "category": "H2Oooh!",
+      "featured": false,
+      "image_url": null
+    },
+    {
+      "name": "Pineapple Juice",
+      "desc": "",
+      "price": "5",
+      "type": "Cold Drink",
+      "category": "Fizz & Fruit",
+      "featured": false,
+      "image_url": null
+    },
+    {
+      "name": "Sparkling Orange",
+      "desc": "",
+      "price": "5",
+      "type": "Cold Drink",
+      "category": "Fizz & Fruit",
+      "featured": false,
+      "image_url": null
+    },
+    {
+      "name": "Sparkling Lemonade",
+      "desc": "",
+      "price": "5",
+      "type": "Cold Drink",
+      "category": "Fizz & Fruit",
+      "featured": false,
+      "image_url": null
+    },
+    {
+      "name": "Sparkling Apple",
+      "desc": "",
+      "price": "5",
+      "type": "Cold Drink",
+      "category": "Fizz & Fruit",
+      "featured": false,
+      "image_url": null
+    },
+    {
+      "name": "IZZE Sparkling",
+      "desc": "",
+      "price": "4",
+      "type": "Cold Drink",
+      "category": "Fizz & Fruit",
+      "featured": false,
+      "image_url": null
+    },
+    {
+      "name": "POPPI Soda",
+      "desc": "",
+      "price": "5",
+      "type": "Cold Drink",
+      "category": "Fizz & Fruit",
+      "featured": false,
+      "image_url": null
+    },
+    {
+      "name": "Coke",
+      "desc": "",
+      "price": "4",
+      "type": "Cold Drink",
+      "category": "Pop Culture",
+      "featured": false,
+      "image_url": null
+    },
+    {
+      "name": "Sprite",
+      "desc": "",
+      "price": "4",
+      "type": "Cold Drink",
+      "category": "Pop Culture",
+      "featured": false,
+      "image_url": null
+    },
+    {
+      "name": "Red Bull",
+      "desc": "",
+      "price": "6",
+      "type": "Cold Drink",
+      "category": "Energizers",
+      "featured": false,
+      "image_url": null
+    },
+    {
+      "name": "Iced Coffee",
+      "desc": "",
+      "price": "4",
+      "type": "Cold Drink",
+      "category": "Energizers",
+      "featured": false,
+      "image_url": null
+    },
+    {
+      "name": "Iced Tea",
+      "desc": "",
+      "price": "4",
+      "type": "Cold Drink",
+      "category": "Energizers",
+      "featured": false,
+      "image_url": null
+    },
+    {
+      "name": "English Breakfast",
+      "desc": "Organic tea.",
+      "price": "6",
+      "type": "Hot Drink",
+      "category": "Organic Tea",
+      "featured": false,
+      "image_url": null
+    },
+    {
+      "name": "Earl Grey",
+      "desc": "Organic tea.",
+      "price": "6",
+      "type": "Hot Drink",
+      "category": "Organic Tea",
+      "featured": false,
+      "image_url": null
+    },
+    {
+      "name": "Persian Chai",
+      "desc": "Organic tea.",
+      "price": "6",
+      "type": "Hot Drink",
+      "category": "Organic Tea",
+      "featured": false,
+      "image_url": null
+    },
+    {
+      "name": "Spiced Chai",
+      "desc": "Organic tea.",
+      "price": "6",
+      "type": "Hot Drink",
+      "category": "Organic Tea",
+      "featured": false,
+      "image_url": null
+    },
+    {
+      "name": "Karak Tea",
+      "desc": "Creamy spiced tea with warm notes of cardamom.",
+      "price": "8",
+      "type": "Hot Drink",
+      "category": "Organic Tea",
+      "featured": false,
+      "image_url": null
+    },
+    {
+      "name": "Green Tea",
+      "desc": "Organic tea.",
+      "price": "6",
+      "type": "Hot Drink",
+      "category": "Organic Tea",
+      "featured": false,
+      "image_url": null
+    },
+    {
+      "name": "Moroccan Mint",
+      "desc": "Organic tea.",
+      "price": "6",
+      "type": "Hot Drink",
+      "category": "Organic Tea",
+      "featured": false,
+      "image_url": null
+    },
+    {
+      "name": "Lemon Ginger",
+      "desc": "Organic tea.",
+      "price": "6",
+      "type": "Hot Drink",
+      "category": "Organic Tea",
+      "featured": false,
+      "image_url": null
+    },
+    {
+      "name": "Wild Raspberry Hibiscus",
+      "desc": "Organic tea.",
+      "price": "6",
+      "type": "Hot Drink",
+      "category": "Organic Tea",
+      "featured": false,
+      "image_url": null
+    },
+    {
+      "name": "Egyptian Chamomile",
+      "desc": "Organic tea.",
+      "price": "6",
+      "type": "Hot Drink",
+      "category": "Organic Tea",
+      "featured": false,
+      "image_url": null
+    },
+    {
+      "name": "Egyptian Black Tea (كشري)",
+      "desc": "Organic tea.",
+      "price": "6",
+      "type": "Hot Drink",
+      "category": "Organic Tea",
+      "featured": false,
+      "image_url": null
+    },
+    {
+      "name": "Double Espresso",
+      "desc": "",
+      "price": "5",
+      "type": "Hot Drink",
+      "category": "Coffee",
+      "featured": false,
+      "image_url": null
+    },
+    {
+      "name": "Oat Cappuccino",
+      "desc": "",
+      "price": "7",
+      "type": "Hot Drink",
+      "category": "Coffee",
+      "featured": false,
+      "image_url": null
+    },
+    {
+      "name": "Mochaccino",
+      "desc": "",
+      "price": "8",
+      "type": "Hot Drink",
+      "category": "Coffee",
+      "featured": false,
+      "image_url": null
+    },
+    {
+      "name": "Matcha Latte",
+      "desc": "",
+      "price": "8",
+      "type": "Hot Drink",
+      "category": "Coffee",
+      "featured": false,
+      "image_url": null
+    },
+    {
+      "name": "Vanilla Latte",
+      "desc": "",
+      "price": "8",
+      "type": "Hot Drink",
+      "category": "Coffee",
+      "featured": false,
+      "image_url": null
+    }
+  ]
+}

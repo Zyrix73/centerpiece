@@ -1,0 +1,159 @@
+{
+  "count": 14,
+  "mixes": [
+    {
+      "id": 1,
+      "name": "Frozen Tropics",
+      "flavors": "Icy Mango • Ambrosia • Sunshine Smoothie",
+      "description": "Icy mango with honeydew melon and blueberry notes, finished with smooth tropical fruit.",
+      "tagline": "Chill hits different.",
+      "category": "Fruity & Icy",
+      "sort_order": 1,
+      "Image_URL": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/mixes/mixes/Frozen-tropics.webp",
+      "image_url": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/mixes/mixes/Frozen-tropics.webp"
+    },
+    {
+      "id": 2,
+      "name": "Berry Freeze",
+      "flavors": "Icy Plum Berry • Red Gummy • Strawberry Jam",
+      "description": "Chilled berries with sweet gummy and strawberry jam.",
+      "tagline": "Cold berries, warm nights.",
+      "category": "Fruity & Icy",
+      "sort_order": 2,
+      "Image_URL": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/mixes/mixes/berry-freeze.webp",
+      "image_url": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/mixes/mixes/berry-freeze.webp"
+    },
+    {
+      "id": 3,
+      "name": "Frozen Paradise",
+      "flavors": "Lady Killer • Icy Peach • Sunshine Smoothie",
+      "description": "Icy peach blended with smooth, sweet tropical fruits.",
+      "tagline": "Peach on ice, paradise found.",
+      "category": "Fruity & Icy",
+      "sort_order": 3,
+      "Image_URL": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/mixes/mixes/frozen-paradise.webp",
+      "image_url": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/mixes/mixes/frozen-paradise.webp"
+    },
+    {
+      "id": 4,
+      "name": "Amazon Trip",
+      "flavors": "Icy Açaí Raspberry • Watermelon • Strawberry Jam",
+      "description": "Icy açaí-raspberry with juicy watermelon and sweet strawberry jam.",
+      "tagline": "Deep in the frozen jungle.",
+      "category": "Fruity & Icy",
+      "sort_order": 4,
+      "Image_URL": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/mixes/mixes/Amazon-trip.webp",
+      "image_url": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/mixes/mixes/Amazon-trip.webp"
+    },
+    {
+      "id": 5,
+      "name": "Livin' in Paradise",
+      "flavors": "Lady Killer • Peach • Lemon Mint",
+      "description": "Juicy peach and tropical fruit with a fresh lemon-mint finish.",
+      "tagline": "Peach season, every session.",
+      "category": "Fruity",
+      "sort_order": 5,
+      "Image_URL": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/mixes/mixes/livin-in-paradise.webp",
+      "image_url": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/mixes/mixes/livin-in-paradise.webp"
+    },
+    {
+      "id": 6,
+      "name": "Love on the Peach",
+      "flavors": "Love 66 • Hola Peaches • White Gummy Bear",
+      "description": "Sweet tropical peach with a smooth gummy-candy finish.",
+      "tagline": "Sweet peach, sweeter finish.",
+      "category": "Fruity",
+      "sort_order": 6,
+      "Image_URL": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/mixes/mixes/love-on-the-peach.webp",
+      "image_url": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/mixes/mixes/love-on-the-peach.webp"
+    },
+    {
+      "id": 7,
+      "name": "Caribbean Mist",
+      "flavors": "Peach N' Ice • Watermelon • Blue Mist",
+      "description": "Juicy watermelon and peach blended with sweet Blue Mist.",
+      "tagline": "Island air, endless mist.",
+      "category": "Fruity",
+      "sort_order": 7,
+      "Image_URL": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/mixes/mixes/caribbean-mist.webp",
+      "image_url": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/mixes/mixes/caribbean-mist.webp"
+    },
+    {
+      "id": 8,
+      "name": "Blue Paradise",
+      "flavors": "Blue Mist • Toasted Berries • Blue Lime Lychee",
+      "description": "Sweet berries and exotic lychee with a bright lime finish.",
+      "tagline": "Berries meet the tropics.",
+      "category": "Fruity",
+      "sort_order": 8,
+      "Image_URL": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/mixes/mixes/blue-paradise.webp",
+      "image_url": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/mixes/mixes/blue-paradise.webp"
+    },
+    {
+      "id": 9,
+      "name": "Cairo Café",
+      "flavors": "Coffee Spice Chai • Banana • Caramel Kiss",
+      "description": "Rich coffee-chai with creamy banana and smooth caramel.",
+      "tagline": "Café culture, elevated.",
+      "category": "Sweet & Creamy",
+      "sort_order": 9,
+      "Image_URL": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/mixes/mixes/cairo-cafe.webp",
+      "image_url": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/mixes/mixes/cairo-cafe.webp"
+    },
+    {
+      "id": 10,
+      "name": "Berries & Cream",
+      "flavors": "Blueberry Muffin • Red Lips • Caramel Kiss",
+      "description": "Sweet blueberry pastry and red berries with a smooth, creamy caramel finish.",
+      "tagline": "Dessert in every draw.",
+      "category": "Sweet & Creamy",
+      "sort_order": 10,
+      "Image_URL": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/mixes/mixes/berries-n-cream.webp",
+      "image_url": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/mixes/mixes/berries-n-cream.webp"
+    },
+    {
+      "id": 11,
+      "name": "Chai Desert",
+      "flavors": "Spice Chai • Caramel Kiss • Milk N' Cookies",
+      "description": "Warm chai and caramel with creamy milk-and-cookie notes.",
+      "tagline": "Cozy chai, sweet escape.",
+      "category": "Sweet & Creamy",
+      "sort_order": 11,
+      "Image_URL": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/mixes/mixes/chai-desert.webp",
+      "image_url": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/mixes/mixes/chai-desert.webp"
+    },
+    {
+      "id": 12,
+      "name": "Blueberry Pudding",
+      "flavors": "Lemon Loaf • Blueberry Muffin • Caramel Kiss",
+      "description": "Sweet blueberry pastry and lemon cake with smooth caramel.",
+      "tagline": "Pastry-sweet, smoke-smooth.",
+      "category": "Sweet & Creamy",
+      "sort_order": 12,
+      "Image_URL": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/mixes/mixes/blueberry-pudding.webp",
+      "image_url": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/mixes/mixes/blueberry-pudding.webp"
+    },
+    {
+      "id": 13,
+      "name": "Arctic Lemon",
+      "flavors": "Lemon Mint • White Gummy Bear",
+      "description": "Crisp lemon-mint with a cool, sweet gummy finish.",
+      "tagline": "Crisp, cool, unmistakable.",
+      "category": "Citrus & Refreshing",
+      "sort_order": 13,
+      "Image_URL": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/mixes/mixes/artic-lemon.webp",
+      "image_url": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/mixes/mixes/artic-lemon.webp"
+    },
+    {
+      "id": 14,
+      "name": "Guava Island",
+      "flavors": "Shaka Guava • Blue Mist • Lemon Lit",
+      "description": "Tropical guava and sweet berry with a bright, zesty lemon finish.",
+      "tagline": "Tropical citrus, island bright.",
+      "category": "Citrus & Refreshing",
+      "sort_order": 14,
+      "Image_URL": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/mixes/mixes/guava-island.webp",
+      "image_url": "https://pub-503bdcef50f44f499fb98ef82b72d6db.r2.dev/mixes/mixes/guava-island.webp"
+    }
+  ]
+}
