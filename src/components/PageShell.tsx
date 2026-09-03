@@ -252,17 +252,12 @@ export default function PageShell({ children, pageTitle, pageDescription, jsonLd
             />
           </div>
 
-          <div className="flex flex-col items-center justify-center gap-2 mt-8 mb-2 text-sand-600 text-xs">
-            <a href="https://getzyrix.com" target="_blank" rel="noopener noreferrer" aria-label="Get Zyrix website" className="transition-opacity hover:opacity-80">
-              <img src="/images/get-zyrix-footer.png" alt="Get Zyrix" className="h-9 w-auto object-contain" />
-            </a>
-            <a href="https://getzyrix.com" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">
-              designed by Get Zyrix
-            </a>
-          </div>
-
           <div className="flex flex-col md:flex-row items-center justify-between gap-3 mt-6 text-sand-600 text-xs">
             <p>&copy; 2026 Centerpiece Hookah Lounge. All rights reserved.</p>
+            <a href="https://getzyrix.com" target="_blank" rel="noopener noreferrer" aria-label="Designed by Get Zyrix" className="flex items-center gap-2 transition-opacity hover:opacity-80">
+              <span className="hover:text-amber-400 transition-colors">designed by Get Zyrix</span>
+              <img src="/images/get-zyrix-footer.png" alt="Get Zyrix" className="h-6 w-auto object-contain" />
+            </a>
             <p>Must be 21+ to enter.</p>
           </div>
         </div>
