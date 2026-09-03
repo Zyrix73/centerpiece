@@ -171,7 +171,7 @@ export default function BuildMyHookahPage() {
       </div>
 
       {/* Step content */}
-      <div className="max-w-md mx-auto px-4 py-6">
+      <div className="max-w-md mx-auto px-4 py-6 pb-28">
         {/* Step 0: Meet your hookah */}
         {step === 0 && (
           <div className="animate-fade-up">
@@ -375,7 +375,7 @@ export default function BuildMyHookahPage() {
       </div>
 
       {/* Bottom navigation */}
-      <div className="sticky bottom-0 z-50 bg-[#120d0b]/95 backdrop-blur-sm border-t border-amber-900/30">
+      <div className="fixed bottom-0 left-0 right-0 z-50 bg-[#120d0b]/95 backdrop-blur-sm border-t border-amber-900/30">
         <div className="max-w-md mx-auto px-4 py-4 flex items-center justify-between">
           {step > 0 ? (
             <button
