@@ -15,7 +15,7 @@ const ROUTES = [
     title: 'Centerpiece Hookah Lounge | Premium Shisha Bar in Westwood, Los Angeles',
     description: 'Premium hookah lounge in Westwood near UCLA. Study, work, and relax with expertly curated flavors and a quiet atmosphere. Open nightly until 2–4 AM.',
     ogTitle: 'Centerpiece Hookah Lounge | Premium Shisha Bar in Westwood, Los Angeles',
-    ogDescription: 'Experience authentic Bali-inspired hookah in Westwood, West LA. 50+ premium shisha flavors, private seating, and a luxury atmosphere. Open nightly until 2–4 AM.',
+    ogDescription: 'Experience Southern California\'s only experimental hookah lounge in Westwood, West LA. 50+ premium shisha flavors, private seating, and mood-based curation. Open nightly until 2–4 AM.',
     canonical: 'https://centerpiecehookahlounge.com/',
   },
   {
@@ -30,10 +30,10 @@ const ROUTES = [
   {
     path: '/who-we-are',
     file: 'who-we-are.html',
-    title: 'About Us | Bali-Inspired Hookah Lounge in Westwood, LA',
-    description: 'Centerpiece Hookah Lounge blends Balinese tranquility with premium shisha craft in Westwood, Los Angeles. Learn about our story, our founder Mina, and our 20-year passion for the perfect bowl.',
-    ogTitle: 'About Us | Bali-Inspired Hookah Lounge in Westwood, LA',
-    ogDescription: 'Discover the story behind Centerpiece Hookah Lounge — a Bali-inspired shisha bar in Westwood, LA founded on 20 years of hookah mastery.',
+    title: 'About Us | Founder Story & Craft — Centerpiece Hookah Lounge, Westwood',
+    description: 'Meet Mina, founder of Centerpiece Hookah Lounge — 20 years perfecting the craft of premium shisha through mood-based curation and rare flavor experimentation in Westwood, Los Angeles.',
+    ogTitle: 'About Us | Founder Story & Craft — Centerpiece Hookah Lounge, Westwood',
+    ogDescription: 'Meet Mina, founder of Centerpiece Hookah Lounge — 20 years perfecting the craft of premium shisha through mood-based curation and rare flavor experimentation in Westwood, Los Angeles.',
     canonical: 'https://centerpiecehookahlounge.com/who-we-are',
   },
   {

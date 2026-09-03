@@ -1,7 +1,7 @@
 # Centerpiece Hookah Lounge
 
 > Premium experimental hookah lounge in Westwood, Los Angeles, California.
-> Where ancient Balinese tradition meets the art of modern shisha.
+> Where mood-based curation meets the art of modern shisha.
 
 ## Business Information
 
@@ -12,7 +12,7 @@
 - **Founded:** 2015
 - **Founder:** Mina (hookah connoisseur, former art gallery curator and importer)
 - **Rating:** 4.9 stars across 1,200+ reviews (Google & Yelp)
-- **Age Requirement:** 18+ to enter, valid photo ID required
+- **Age Requirement:** 21+ to enter, valid photo ID required
 - **Reservations:** Recommended on weekends; walk-ins welcome based on availability. Reserved tables held for 15 minutes.
 
 ## Hours of Operation
@@ -40,8 +40,8 @@ Holiday hours may vary. Call to confirm.
 - Complimentary WiFi throughout the lounge
 - Study-friendly quiet atmosphere with comfortable seating
 - Private seating areas and alcoves
-- Bali-inspired decor with plush cushions
-- Tableside Balinese ginger tea ceremony
+- Private seating areas and alcoves
+- Tableside tea ceremony
 - Curated music (oud-driven classical to modern Arabic fusion)
 - Private event/suite bookings available
 
@@ -49,7 +49,7 @@ Holiday hours may vary. Call to confirm.
 
 ### 1. Home (/)
 
-The landing page introduces Centerpiece Hookah Lounge with a full-screen hero featuring the logo and tagline "Where ancient Balinese tradition meets the art of modern shisha. Surrender to the ritual."
+The landing page introduces Centerpiece Hookah Lounge with a full-screen hero featuring the logo and tagline "Surrender to the ritual."
 
 Sections include:
 
@@ -57,9 +57,9 @@ Sections include:
 Step through our doors and into another world. Every detail is curated to transport you to the medinas of Marrakech and Fes — right here in Westwood, the heart of West Los Angeles.
 
 Four experience highlights:
-- Private Seating: Secluded alcoves with plush Balinese cushions, perfect for intimate gatherings.
+- Private Seating: Secluded alcoves with plush cushions, perfect for intimate gatherings.
 - Craft Shisha: Premium tobacco hand-prepared by our masters, served in handcrafted clay bowls.
-- Balinese Tea: Authentic ginger and lemongrass tea ceremony performed tableside with traditional clay teapots.
+- Tea Service: Authentic ginger and lemongrass tea ceremony performed tableside with traditional clay teapots.
 - Live Ambiance: Curated music ranging from oud-driven classical to modern Arabic fusion.
 
 Stats: 50+ flavor profiles, 12 private seating areas, 7 years of craft, infinite memories made.
@@ -92,7 +92,7 @@ Featured reviews:
 - **Where is Centerpiece Hookah Lounge located?** 1446 Westwood Blvd, Los Angeles, CA 90024 — in the heart of Westwood, West Los Angeles, just minutes from UCLA.
 - **What are your hours?** Mon–Thu: 2 PM – 2 AM, Fri: 2 PM – 4 AM, Sat: 3 PM – 4 AM, Sun: 2 PM – 2:30 AM. Holiday hours may vary.
 - **Do I need a reservation?** Reservations are strongly recommended on weekends. Walk-ins are welcome based on availability. Reserved tables are held for 15 minutes.
-- **What is the minimum age to enter?** Guests must be 18 years of age or older. Valid photo ID is required.
+- **What is the minimum age to enter?** Guests must be 21 years of age or older. Valid photo ID is required.
 - **What hookah flavors do you offer?** We carry 50+ premium shisha flavors sourced from Indonesia, Turkey, and Egypt — from florals and mint to bold double-apple classics and exotic signatures.
 - **Can I book Centerpiece for a private event?** Yes! Our private suite is available for birthdays, corporate gatherings, and celebrations of all kinds. Fully customizable with dedicated service. Call us to plan your event.
 - **What neighborhoods is Centerpiece near?** Westwood, UCLA, West LA, Sawtelle, Brentwood, Westwood Village, Century City, Bel Air, Beverly Hills, Mar Vista, Palms, Culver City, Santa Monica, Venice, Beverly Grove, Fairfax, Mid-City, West Hollywood, Hollywood, Pacific Palisades, Koreatown, Sherman Oaks, Encino, Tarzana, Silver Lake, Echo Park, Los Feliz, Downtown LA, and beyond.
@@ -305,7 +305,7 @@ Westwood (0 mi), UCLA Campus (0.5 mi), West Los Angeles (1 mi), Sawtelle (1.5 mi
 - Lot Parking: Public lot available behind the building. Enter from the alley off Weyburn Ave.
 - Rideshare Drop-off: Pull up directly to our entrance at 1446 Westwood Blvd for easy drop-off.
 
-Walk-ins welcome based on availability. Must be 18+ to enter. Valid photo ID required.
+Walk-ins welcome based on availability. Must be 21+ to enter. Valid photo ID required.
 
 ### 6. Links (/links)
 
