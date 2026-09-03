@@ -252,7 +252,7 @@ export default function LinksPage() {
               2–6 PM · 7 Days a Week
             </p>
             <p className="relative z-[3] text-[#c9a84c]/70 text-xs tracking-wide mt-0.5">
-              Hookah $29
+              Hookah $35
             </p>
           </div>
 

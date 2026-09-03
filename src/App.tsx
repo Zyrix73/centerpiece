@@ -326,7 +326,7 @@ const reviewsSection = useInView();
             </span>
             <span className="text-amber-200/60 text-xs hidden sm:inline" aria-hidden="true">|</span>
             <span className="text-amber-100 text-xs sm:text-sm font-semibold tracking-wide whitespace-nowrap">
-              Hookah $29
+              Hookah $35
             </span>
           </div>
         </div>
