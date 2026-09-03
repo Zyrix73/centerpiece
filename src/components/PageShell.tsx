@@ -254,7 +254,7 @@ export default function PageShell({ children, pageTitle, pageDescription, jsonLd
 
           <div className="flex flex-col md:flex-row items-center justify-between gap-3 mt-6 text-sand-600 text-xs">
             <p>&copy; 2026 Centerpiece Hookah Lounge. All rights reserved.</p>
-            <p>Must be 18+ to enter. Please enjoy responsibly.</p>
+            <p>Must be 21+ to enter.</p>
           </div>
         </div>
       </footer>

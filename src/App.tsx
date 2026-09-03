@@ -114,7 +114,7 @@ const FAQ_ITEMS = [
   },
   {
     q: 'What is the minimum age to enter?',
-    a: 'Guests must be 18 years of age or older to enter. Valid photo ID is required.',
+    a: 'Guests must be 21 years of age or older to enter. Valid photo ID is required.',
   },
   {
     q: 'What hookah flavors do you offer?',
@@ -855,7 +855,7 @@ const reviewsSection = useInView();
 
           <div className="flex flex-col md:flex-row items-center justify-between gap-3 mt-6 text-sand-600 text-xs">
             <p>© 2026 Centerpiece Hookah Lounge. All rights reserved.</p>
-            <p>Must be 18+ to enter. Please enjoy responsibly.</p>
+            <p>Must be 21+ to enter.</p>
           </div>
         </div>
       </footer>

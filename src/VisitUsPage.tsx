@@ -109,7 +109,7 @@ export default function VisitUsPage() {
   return (
     <PageShell
       pageTitle="Visit Us | Centerpiece Hookah Lounge — Westwood, Los Angeles CA 90024"
-      pageDescription="Hours, WiFi, study-friendly seating at Centerpiece Hookah Lounge, Westwood, 90024. Open nightly until 2–4 AM. Free parking after 8 PM. Walk-ins welcome. Must be 18+."
+      pageDescription="Hours, WiFi, study-friendly seating at Centerpiece Hookah Lounge, Westwood, 90024. Open nightly until 2–4 AM. Free parking after 8 PM. Walk-ins welcome. Must be 21+."
       jsonLd={jsonLd}
     >
       {/* Hero */}
@@ -280,7 +280,7 @@ export default function VisitUsPage() {
               <Star size={16} className="fill-amber-400 text-amber-400" aria-hidden="true" />
               <p className="text-sand-300 text-sm">
                 <span className="text-amber-300 font-medium">Walk-ins welcome</span> based on availability.
-                Must be 18+ to enter. Valid photo ID required.
+                Must be 21+ to enter. Valid photo ID required.
               </p>
             </div>
           </div>
