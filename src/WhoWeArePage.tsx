@@ -56,7 +56,7 @@ const EQUIPMENT = [
   {
     num: '01',
     name: 'Wookah Hookahs',
-    desc: 'German-engineered for precision airflow. Every draw is designed, not accidental. Built for flavor intensity and smoke production.',
+    desc: 'Polish-designed and handcrafted for precision airflow. Every draw is designed, not accidental. Built for flavor intensity and smoke production.',
     icon: Cpu,
   },
   {

@@ -255,7 +255,7 @@ export default function MenuPage() {
 
   return (
     <PageShell
-      pageTitle="Menu | Centerpiece Hookah Lounge — Hookah, Drinks & Food in Westwood"
+      pageTitle="Hookah Menu — Premium Shisha, Tea & Food in Westwood"
       pageDescription="Explore the full Centerpiece Hookah Lounge menu: premium hookah flavors, drinks, tea, and food. Visit us in Westwood, Los Angeles CA 90024."
       jsonLd={jsonLd}
     >

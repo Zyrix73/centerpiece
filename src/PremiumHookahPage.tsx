@@ -98,7 +98,7 @@ export default function PremiumHookahPage() {
 
   return (
     <PageShell
-      pageTitle="What Is Premium Hookah? | Centerpiece Hookah Lounge"
+      pageTitle="Premium Hookah in Westwood | Wookah, Dark Leaf & Custom Blends"
       pageDescription="Every premium hookah session starts with five deliberate decisions: a Wookah Hookah, a crystal glass head, premium tobacco, a Russian HMD, and Leorgange charcoal."
       jsonLd={jsonLd}
     >
