@@ -855,13 +855,15 @@ const reviewsSection = useInView();
             />
           </div>
 
-          <div className="flex flex-col md:flex-row items-center justify-between gap-3 mt-6 text-sand-600 text-xs">
-            <p>© 2026 Centerpiece Hookah Lounge. All rights reserved.</p>
+          <div className="flex flex-col items-center gap-3 mt-6 text-sand-600 text-xs">
+            <div className="flex flex-col md:flex-row items-center justify-between w-full gap-3">
+              <p>© 2026 Centerpiece Hookah Lounge. All rights reserved.</p>
+              <p>Must be 21+ to enter.</p>
+            </div>
             <a href="https://getzyrix.com" target="_blank" rel="noopener noreferrer" aria-label="Designed by Get Zyrix" className="flex items-center gap-2 transition-opacity hover:opacity-80">
               <span className="hover:text-amber-400 transition-colors">designed by Get Zyrix</span>
               <img src="/images/get-zyrix-footer.png" alt="Get Zyrix" className="h-6 w-auto object-contain" />
             </a>
-            <p>Must be 21+ to enter.</p>
           </div>
         </div>
       </footer>
