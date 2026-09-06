@@ -103,7 +103,7 @@ const FALLBACK_REVIEWS = [
 const FAQ_ITEMS = [
   {
     q: 'Where is Centerpiece Hookah Lounge located?',
-    a: 'We are located at 1446 Westwood Blvd, Los Angeles, CA 90024 — in the heart of Westwood, West Los Angeles, just minutes from UCLA.',
+    a: 'We are located at 1446 Westwood Blvd, Los Angeles, CA 90024 — in the heart of Westwood, West Los Angeles, just minutes from UCLA and the Persian Square (Little Persia) restaurant district.',
   },
   {
     q: 'What are your hours?',
@@ -127,7 +127,7 @@ const FAQ_ITEMS = [
   },
   {
     q: 'What neighborhoods is Centerpiece near?',
-    a: "We are easily accessible from Westwood, UCLA, West LA, Sawtelle, Brentwood, Westwood Village, Century City, Bel Air, Beverly Hills, Mar Vista, Palms, Culver City, Santa Monica, Venice, Beverly Grove, Fairfax, Mid-City, West Hollywood, Hollywood, Pacific Palisades, Koreatown, Sherman Oaks, Encino, Tarzana, Silver Lake, Echo Park, Los Feliz, Downtown LA, and beyond. We're the top hookah lounge in West LA.",
+    a: "We are easily accessible from Westwood, UCLA, West LA, Sawtelle, Brentwood, Westwood Village, Persian Square, Century City, Bel Air, Beverly Hills, Mar Vista, Palms, Culver City, Santa Monica, Venice, Beverly Grove, Fairfax, Mid-City, West Hollywood, Hollywood, Pacific Palisades, Koreatown, Sherman Oaks, Encino, Tarzana, Silver Lake, Echo Park, Los Feliz, Downtown LA, and beyond. We're the top hookah lounge in West LA.",
   },
   {
     q: 'Is Centerpiece good for studying?',

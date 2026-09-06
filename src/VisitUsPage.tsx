@@ -15,6 +15,7 @@ const HOURS = [
 const NEIGHBORHOODS = [
   { name: 'Westwood', distance: '0 miles' },
   { name: 'UCLA Campus', distance: '0.5 miles' },
+  { name: 'Persian Square (Little Persia)', distance: '0.6 miles' },
   { name: 'West Los Angeles', distance: '1 mile' },
   { name: 'Sawtelle', distance: '1.5 miles' },
   { name: 'Brentwood', distance: '2.5 miles' },
@@ -128,7 +129,7 @@ export default function VisitUsPage() {
           <h1 className="font-serif text-4xl md:text-6xl text-amber-100 mb-4 whitespace-nowrap">Visit Us</h1>
           <OrnamentDivider />
           <p className="text-sand-300 max-w-xl mx-auto text-base leading-relaxed">
-            In the heart of Westwood, Los Angeles — your destination for premium hookah near UCLA and all of West LA.
+            In the heart of Westwood, Los Angeles — your destination for premium hookah near UCLA, Persian Square, and all of West LA.
           </p>
         </div>
       </section>
