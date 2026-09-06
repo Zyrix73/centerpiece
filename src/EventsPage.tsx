@@ -212,7 +212,7 @@ export default function EventsPage() {
                   <div className={isImageRight ? 'md:order-2' : 'md:order-1'}>
                     <div className="relative aspect-[4/3] rounded-sm overflow-hidden border border-amber-700/30 bg-[#1a1210]/60">
                       <img
-                        src={i === 0 ? '/images/who-we-are-no-text.webp' : i === 1 ? '/images/lantern.webp' : i === 2 ? '/images/centerpiece-hero.webp' : '/images/Wookah-hookah-square.webp'}
+                        src={['/images/who-we-are-no-text.webp', '/images/lantern.webp', '/images/centerpiece-hero.webp', '/images/who-we-are-no-text.webp'][i]}
                         alt={feature.title}
                         className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                         loading="lazy"
