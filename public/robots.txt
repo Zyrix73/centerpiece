@@ -1,14 +1,13 @@
 User-agent: *
 Allow: /
 
-# Google Search
+# Google
 User-agent: Googlebot
 Allow: /
 
 User-agent: Googlebot-Image
 Allow: /
 
-# Google Gemini / AI systems
 User-agent: Google-Extended
 Allow: /
 
@@ -16,11 +15,14 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-# OpenAI / ChatGPT Search
+# OpenAI
+User-agent: GPTBot
+Allow: /
+
 User-agent: OAI-SearchBot
 Allow: /
 
-User-agent: GPTBot
+User-agent: ChatGPT-User
 Allow: /
 
 # Perplexity
@@ -34,49 +36,10 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
-User-agent: Claude-User
-Allow: /
-
-# Allow all crawlers by default
-User-agent: *
-Allow: /
-
-# Search engines
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-# OpenAI crawlers
-User-agent: GPTBot
-Allow: /
-
-User-agent: OAI-SearchBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-# Anthropic crawlers
-User-agent: ClaudeBot
-Allow: /
-
 User-agent: Claude-SearchBot
 Allow: /
 
 User-agent: Claude-User
-Allow: /
-
-# Perplexity
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: Perplexity-User
-Allow: /
-
-# Google's AI/extended crawler (for Gemini/AI Overviews training & retrieval)
-User-agent: Google-Extended
 Allow: /
 
 # Sitemap
