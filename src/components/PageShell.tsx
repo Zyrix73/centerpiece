@@ -101,12 +101,12 @@ export default function PageShell({ children, pageTitle, pageDescription, jsonLd
               </div>
             </a>
 
-            <div className="hidden md:flex items-center justify-center gap-8">
+            <div className="hidden md:flex items-center justify-center gap-5 lg:gap-8">
               {NAV_LINKS.map((l) => (
                 <a
                   key={l.label}
                   href={l.href}
-                  className="text-sm tracking-widest uppercase text-sand-300 hover:text-amber-400 transition-colors duration-300 relative group whitespace-nowrap"
+                  className="text-xs md:text-sm tracking-widest uppercase text-sand-300 hover:text-amber-400 transition-colors duration-300 relative group whitespace-nowrap"
                 >
                   {l.label}
                   <span className="absolute -bottom-1 left-0 w-0 h-px bg-amber-400 group-hover:w-full transition-all duration-300" />

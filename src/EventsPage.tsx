@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { PartyPopper, Briefcase, Film, Phone, Sparkles, Users, Camera, MapPin } from 'lucide-react';
+import { PartyPopper, Briefcase, Film, Phone, Sparkles, Users, Camera, MapPin, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import PageShell, { OrnamentDivider, BalineseBorder } from './components/PageShell';
 
 const EVENT_TRACKS = [
@@ -43,6 +43,15 @@ const WHY_FEATURES = [
   },
 ];
 
+const GALLERY_IMAGES = [
+  { src: '/images/centerpiece-hero.webp', alt: 'Centerpiece Hookah Lounge main room with warm lighting and Moroccan decor' },
+  { src: '/images/who-we-are-no-text.webp', alt: 'Lounge seating area with ambient lighting and architectural details' },
+  { src: '/images/lantern.webp', alt: 'Moroccan lantern casting warm light in the lounge' },
+  { src: '/images/hookah-building.webp', alt: 'Exterior of Centerpiece Hookah Lounge building on Westwood Blvd' },
+  { src: '/images/karak-chai.webp', alt: 'Traditional karak chai tea service at Centerpiece' },
+  { src: '/images/Who-we-are.webp', alt: 'Interior detail of the Moroccan-styled hookah lounge' },
+];
+
 const FAQS = [
   {
     q: 'Can I rent Centerpiece Hookah Lounge for a private event?',
@@ -81,8 +90,26 @@ function useInView(threshold = 0.15) {
 export default function EventsPage() {
   const tracksSection = useInView();
   const whySection = useInView();
+  const gallerySection = useInView();
   const faqSection = useInView();
   const ctaSection = useInView();
+
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
+  useEffect(() => {
+    if (lightboxIndex === null) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setLightboxIndex(null);
+      if (e.key === 'ArrowRight') setLightboxIndex((i) => (i === null ? null : (i + 1) % GALLERY_IMAGES.length));
+      if (e.key === 'ArrowLeft') setLightboxIndex((i) => (i === null ? null : (i - 1 + GALLERY_IMAGES.length) % GALLERY_IMAGES.length));
+    };
+    window.addEventListener('keydown', onKey);
+    document.body.style.overflow = 'hidden';
+    return () => {
+      window.removeEventListener('keydown', onKey);
+      document.body.style.overflow = '';
+    };
+  }, [lightboxIndex]);
 
   const jsonLd = [
     {
@@ -226,6 +253,85 @@ export default function EventsPage() {
           </div>
         </div>
       </section>
+
+      {/* Gallery */}
+      <section className="py-16 px-6 bg-[#120d0b] relative overflow-hidden">
+        <div className="absolute inset-0 bg-bali-pattern opacity-100 pointer-events-none" aria-hidden="true" />
+        <div ref={gallerySection.ref} className={`max-w-6xl mx-auto transition-all duration-700 relative z-10 ${gallerySection.inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className="text-center mb-10">
+            <p className="text-amber-500 text-xs tracking-[0.4em] uppercase mb-3">The Space</p>
+            <h2 className="font-serif text-3xl md:text-4xl text-amber-100 mb-4">A Look Inside</h2>
+            <OrnamentDivider />
+            <p className="text-sand-300 max-w-xl mx-auto text-sm leading-relaxed mt-4">
+              Moroccan architectural detail, warm neon accents, and an open floor plan — every angle tells a story.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+            {GALLERY_IMAGES.map((img, i) => (
+              <button
+                key={img.src}
+                onClick={() => setLightboxIndex(i)}
+                className={`group relative overflow-hidden rounded-sm border border-amber-900/30 bg-[#1a1210]/60 ${i === 0 ? 'col-span-2 md:col-span-2 row-span-2' : ''}`}
+                aria-label={`View photo: ${img.alt}`}
+              >
+                <div className={`${i === 0 ? 'aspect-[16/9] md:aspect-auto md:h-full' : 'aspect-square'}`}>
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#120d0b]/70 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300" aria-hidden="true" />
+                <div className="absolute bottom-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <Camera size={18} className="text-amber-400" aria-hidden="true" />
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Lightbox */}
+      {lightboxIndex !== null && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-[#120d0b]/95 backdrop-blur-sm"
+          onClick={() => setLightboxIndex(null)}
+        >
+          <button
+            className="absolute top-5 right-5 text-amber-400 hover:text-amber-300 transition-colors p-2"
+            onClick={() => setLightboxIndex(null)}
+            aria-label="Close gallery"
+          >
+            <X size={28} aria-hidden="true" />
+          </button>
+          <button
+            className="absolute left-3 md:left-6 text-amber-400 hover:text-amber-300 transition-colors p-2"
+            onClick={(e) => { e.stopPropagation(); setLightboxIndex((i) => (i === null ? null : (i - 1 + GALLERY_IMAGES.length) % GALLERY_IMAGES.length)); }}
+            aria-label="Previous photo"
+          >
+            <ChevronLeft size={32} aria-hidden="true" />
+          </button>
+          <figure className="max-w-4xl w-full px-12 md:px-16" onClick={(e) => e.stopPropagation()}>
+            <img
+              src={GALLERY_IMAGES[lightboxIndex].src}
+              alt={GALLERY_IMAGES[lightboxIndex].alt}
+              className="w-full max-h-[80vh] object-contain rounded-sm border border-amber-900/30"
+            />
+            <figcaption className="text-center text-sand-400 text-sm mt-4">
+              {lightboxIndex + 1} / {GALLERY_IMAGES.length} — {GALLERY_IMAGES[lightboxIndex].alt}
+            </figcaption>
+          </figure>
+          <button
+            className="absolute right-3 md:right-6 text-amber-400 hover:text-amber-300 transition-colors p-2"
+            onClick={(e) => { e.stopPropagation(); setLightboxIndex((i) => (i === null ? null : (i + 1) % GALLERY_IMAGES.length)); }}
+            aria-label="Next photo"
+          >
+            <ChevronRight size={32} aria-hidden="true" />
+          </button>
+        </div>
+      )}
 
       {/* FAQ */}
       <section className="py-16 px-6 bg-[#120d0b] relative overflow-hidden">

@@ -29,6 +29,7 @@ const NAV_LINKS = [
   { label: 'Who We Are', href: '/who-we-are' },
   { label: 'Premium Hookah', href: '/premium-hookah' },
   { label: 'Visit Us', href: '/visit-us' },
+  { label: 'Private Events', href: '/private-events' },
 ];
 
 const EXPERIENCES = [
@@ -248,12 +249,12 @@ const reviewsSection = useInView();
               </div>
             </a>
 
-            <div className="hidden md:flex items-center justify-center gap-8">
+            <div className="hidden md:flex items-center justify-center gap-5 lg:gap-8">
               {NAV_LINKS.map((l) => (
                 <a
                   key={l.label}
                   href={l.href}
-                  className="text-sm tracking-widest uppercase text-sand-300 hover:text-amber-400 transition-colors duration-300 relative group whitespace-nowrap"
+                  className="text-xs md:text-sm tracking-widest uppercase text-sand-300 hover:text-amber-400 transition-colors duration-300 relative group whitespace-nowrap"
                 >
                   {l.label}
                   <span className="absolute -bottom-1 left-0 w-0 h-px bg-amber-400 group-hover:w-full transition-all duration-300" />
@@ -793,6 +794,7 @@ const reviewsSection = useInView();
                   { label: 'Who We Are', href: '/who-we-are' },
                   { label: 'Premium Hookah', href: '/premium-hookah' },
                   { label: 'Study-friendly lounge with WiFi', href: '/visit-us' },
+                  { label: 'Private Events', href: '/private-events' },
                 ].map((l) => (
                   <li key={l.label}>
                     <a href={l.href} className="text-sand-500 hover:text-amber-400 text-sm transition-colors">
