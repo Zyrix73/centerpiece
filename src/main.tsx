@@ -7,6 +7,7 @@ import PremiumHookahPage from './PremiumHookahPage.tsx';
 import VisitUsPage from './VisitUsPage.tsx';
 import MenuPage from './MenuPage.tsx';
 import BuildMyHookahPage from './BuildMyHookahPage.tsx';
+import EventsPage from './EventsPage.tsx';
 import './index.css';
 
 const path = window.location.pathname;
@@ -18,6 +19,7 @@ else if (path === '/premium-hookah') page = <PremiumHookahPage />;
 else if (path === '/visit-us') page = <VisitUsPage />;
 else if (path === '/menu') page = <MenuPage />;
 else if (path === '/build-my-hookah') page = <BuildMyHookahPage />;
+else if (path === '/private-events') page = <EventsPage />;
 else page = <App />;
 
 createRoot(document.getElementById('root')!).render(

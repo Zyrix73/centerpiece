@@ -63,6 +63,15 @@ const ROUTES = [
     ogDescription: 'Build your custom hookah with premium add-ons, ice hose, CBD, THC, and signature flavor mixes at Centerpiece Hookah Lounge.',
     canonical: 'https://centerpiecehookahlounge.com/build-my-hookah',
   },
+  {
+    path: '/private-events',
+    file: 'private-events.html',
+    title: 'Private Events, Corporate Parties & Filming Location | Centerpiece Hookah Lounge, Westwood',
+    description: 'Book Centerpiece Hookah Lounge in Westwood, Los Angeles for private parties, corporate events, and film or photo productions. Open-floor Moroccan-styled lounge minutes from UCLA. Call Mina at (310) 977-0780 for a custom quote.',
+    ogTitle: 'Private Events, Corporate Parties & Filming Location | Centerpiece Hookah Lounge, Westwood',
+    ogDescription: 'Book Centerpiece Hookah Lounge in Westwood, Los Angeles for private parties, corporate events, and film or photo productions. Open-floor Moroccan-styled lounge minutes from UCLA. Call Mina at (310) 977-0780 for a custom quote.',
+    canonical: 'https://centerpiecehookahlounge.com/private-events',
+  },
 ];
 
 const MIME = {
