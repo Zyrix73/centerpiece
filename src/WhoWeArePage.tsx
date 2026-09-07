@@ -67,7 +67,7 @@ const EQUIPMENT = [
   },
   {
     num: '03',
-    name: 'LeOrange Premium Coconut Hookah',
+    name: 'LeOrange Premium Coconut Charcoal',
     desc: 'High-end coal with minimal ash. Ash clouds dilute flavor and ruin smoke ratio. We don\'t compromise.',
     icon: Zap,
   },
