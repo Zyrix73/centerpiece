@@ -11,7 +11,7 @@ const VIDEO_TIMESTAMPS: TimestampLabel[] = [
   { start: 3, end: 6, text: 'Crystal Glass Head', position: 'top' },
   { start: 6, end: 9, text: 'Premium Tobacco Leaf', position: 'middle' },
   { start: 9, end: 12, text: 'Russian HMD', position: 'top' },
-  { start: 12, end: 15, text: 'Leorgange Charcoal', position: 'top' },
+  { start: 12, end: 15, text: 'Le Orange Charcoal', position: 'top' },
 ];
 
 const TOBACCO_TAGS = ['Adalya', 'Eternal Smoke', 'Dark Leaf', 'Russian Tobacco', 'Sebero', 'Tangiers'];
@@ -23,7 +23,7 @@ const jsonLd = {
       '@type': 'WebPage',
       name: 'What Is Premium Hookah? | Centerpiece Hookah Lounge',
       description:
-        'Every premium hookah session starts with five deliberate decisions: a Wookah Hookah, a crystal glass head, premium tobacco, a Russian HMD, and Leorgange charcoal.',
+        'Every premium hookah session starts with five deliberate decisions: a Wookah Hookah, a crystal glass head, premium tobacco, a Russian HMD, and Le Orange charcoal.',
       url: 'https://centerpiecehookahlounge.com/premium-hookah',
       publisher: { '@type': 'Organization', name: 'Centerpiece Hookah Lounge' },
     },
@@ -35,7 +35,7 @@ const jsonLd = {
         { '@type': 'ListItem', position: 2, name: 'Crystal Glass Head' },
         { '@type': 'ListItem', position: 3, name: 'Premium Tobacco' },
         { '@type': 'ListItem', position: 4, name: 'Russian HMD' },
-        { '@type': 'ListItem', position: 5, name: 'Leorgange Charcoal' },
+        { '@type': 'ListItem', position: 5, name: 'Le Orange Charcoal' },
       ],
     },
   ],
@@ -99,7 +99,7 @@ export default function PremiumHookahPage() {
   return (
     <PageShell
       pageTitle="Premium Hookah in Westwood | Wookah, Dark Leaf & Custom Blends"
-      pageDescription="Every premium hookah session starts with five deliberate decisions: a Wookah Hookah, a crystal glass head, premium tobacco, a Russian HMD, and Leorgange charcoal."
+      pageDescription="Every premium hookah session starts with five deliberate decisions: a Wookah Hookah, a crystal glass head, premium tobacco, a Russian HMD, and Le Orange charcoal."
       jsonLd={jsonLd}
     >
       {/* ── SECTION 0 — HERO / VIDEO BREAKDOWN ── */}
@@ -477,7 +477,7 @@ export default function PremiumHookahPage() {
         </div>
       </section>
 
-      {/* ── SECTION 5 — THE CHARCOAL: LEORGANGE ── */}
+      {/* ── SECTION 5 — THE CHARCOAL: LE ORANGE ── */}
       <section className="py-16 md:py-24 px-6 bg-[#0E0C10] relative overflow-hidden border-t border-[#C9922E]/10">
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -491,7 +491,7 @@ export default function PremiumHookahPage() {
               <div className="relative rounded-sm overflow-hidden border border-[#FFB347]/20 aspect-[4/5]">
                 <img
                   src="/images/leorange-square.webp"
-                  alt="Leorgange natural charcoal"
+                  alt="Le Orange natural charcoal"
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
@@ -508,12 +508,12 @@ export default function PremiumHookahPage() {
                 <div className="space-y-4 text-sand-300 text-base leading-relaxed">
                   <p>
                     The last piece is the one nobody asks about — the charcoal — and it's
-                    still a deliberate choice. We use Leorgange charcoal, a high-heat
+                    still a deliberate choice. We use Le Orange charcoal, a high-heat
                     natural coal built to stay lit and burn clean, instead of the
                     quick-light briquettes most places default to.
                   </p>
                   <p>
-                    Leorgange holds a high, stable temperature for a long burn without
+                    Le Orange holds a high, stable temperature for a long burn without
                     needing to be replaced every twenty minutes, and it produces
                     noticeably minimal ash while it does it. Less ash means less soot
                     falling into your bowl, less interference with your HMD's airflow, and

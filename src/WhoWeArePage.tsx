@@ -10,7 +10,7 @@ const MICHELIN_PARALLELS = [
   { icon: Search, chef: 'Sources ingredients obsessively', mina: 'Sources rare leaf from around the world' },
   { icon: Beaker, chef: 'Tests combinations for months', mina: 'Tests flavor combinations that don\'t exist yet' },
   { icon: Heart, chef: 'Matches every dish to the diner\'s mood', mina: 'Matches your hookah to your emotional state' },
-  { icon: X, chef: 'Rejects shortcuts and mass production', mina: 'Uses only premium equipment — Wookah, Russian, LeOrange' },
+  { icon: X, chef: 'Rejects shortcuts and mass production', mina: 'Uses only premium equipment — Wookah, Russian, Le Orange' },
   { icon: Sparkles, chef: 'Constantly evolves and experiments', mina: 'Experiments every single week' },
   { icon: ChefHat, chef: 'Treats equipment as sacred', mina: 'Refuses to be another trend-following lounge' },
 ];
@@ -193,7 +193,7 @@ export default function WhoWeArePage() {
     },
     "knowsAbout": [
       "Wookah Hookahs", "Russian Hookahs", "Dark Leaf", "Blonde Leaf",
-      "Experimental Flavor Development", "LeOrange Premium Coconut Hookah",
+      "Experimental Flavor Development", "Le Orange Premium Coconut Charcoal",
       "Hookah Curation", "Experiential Design"
     ],
     "specialization": "Experience-based hookah curation with Michelin-level attention to detail",

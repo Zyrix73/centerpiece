@@ -68,7 +68,7 @@ const CATEGORY_STYLES: Record<string, { dot: string; pill: string }> = {
 const STANDARD_ITEMS = [
   { label: 'Crystalized Glass Bowl', icon: FlaskConical },
   { label: 'Russian HMD', icon: Wind },
-  { label: 'Leorange Premium Charcoal', icon: Sparkles },
+  { label: 'Le Orange Premium Charcoal', icon: Sparkles },
   { label: 'Standard Disposable Hose', icon: Wind },
 ];
 
