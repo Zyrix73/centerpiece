@@ -531,6 +531,41 @@ export default function PremiumHookahPage() {
         </div>
       </section>
 
+      {/* ── SECTION 5.5 — PRECISION BEYOND THE FLAVOR ── */}
+      <section className="py-16 md:py-24 px-6 bg-[#0E0C10] relative overflow-hidden border-t border-[#C9922E]/10">
+        <div className="max-w-3xl mx-auto">
+          <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.3 }}
+            className="text-center"
+          >
+            <motion.p variants={item} className="text-[#FFB347] text-xs tracking-[0.4em] uppercase mb-3">
+              Precision Beyond the Flavor
+            </motion.p>
+            <AnimatedHeading
+              text="Creating a Great Mix Is Only Half the Equation"
+              className="font-serif text-2xl md:text-3xl text-[#F2E8D8] mb-5 leading-tight"
+            />
+            <motion.div variants={item}>
+              <OrnamentDivider />
+            </motion.div>
+            <motion.div variants={item} className="space-y-4 text-sand-300 text-base leading-relaxed mt-6 text-left">
+              <p>
+                Mina also considers the bowl, tobacco density, heat-management system,
+                charcoal, airflow and temperature required to express each blend properly.
+              </p>
+              <p>
+                The same recipe can taste dramatically different when those variables change.
+                That is why Centerpiece treats the entire hookah as part of the composition —
+                not simply the vessel that holds it.
+              </p>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* ── SECTION 6 — CLOSING CTA ── */}
       <section className="py-20 md:py-28 px-6 bg-[#0E0C10] relative overflow-hidden border-t border-[#C9922E]/10">
         <motion.div

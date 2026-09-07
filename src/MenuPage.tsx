@@ -435,6 +435,15 @@ export default function MenuPage() {
                   <h2 className="font-serif text-2xl text-amber-200 text-center px-4">Hookah Flavors</h2>
                   <div className="flex-1 h-px bg-gradient-to-r from-amber-700/40 to-transparent" aria-hidden="true" />
                 </div>
+                <div className="max-w-2xl mx-auto text-center mb-10">
+                  <p className="text-amber-500 text-xs tracking-[0.4em] uppercase mb-3">Centerpiece Signature Mixes</p>
+                  <p className="text-sand-300 text-base leading-relaxed">
+                    Curated in-house by Mina. Each Centerpiece signature mix is developed
+                    through experimentation with flavor balance, tobacco selection,
+                    proportions and session progression. These aren't random combinations
+                    from a flavor shelf — they're recipes refined until every note has a purpose.
+                  </p>
+                </div>
                 {MIXES.length === 0 ? (
                   <EmptyState message="Hookah flavors coming soon." />
                 ) : (

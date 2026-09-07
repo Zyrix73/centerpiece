@@ -172,6 +172,7 @@ export default function WhoWeArePage() {
   const minaStorySection = useInView(0.15, true);
   const michelinSection = useInView();
   const rdSection = useInView();
+  const curatorSection = useInView();
   const sommelierSection = useInView();
   const equipmentSection = useInView();
   const leafSection = useInView();
@@ -345,13 +346,21 @@ export default function WhoWeArePage() {
 
       {/* ════════════════ SECTION 1: THE MICHELIN STANDARD ════════════════ */}
       <SectionWrapper bg="#0E0C10" inView={michelinSection.inView} refEl={michelinSection.ref} maxW="max-w-5xl">
-        <SectionHeader kicker="The Michelin Standard" title="How Mina Approaches Hookah" icon={ChefHat} />
+        <SectionHeader kicker="The Michelin Mindset of Hookah" title="Flavor Is Curated, Not Simply Mixed" icon={ChefHat} />
 
         {/* Intro card */}
         <div className="text-center mb-10 max-w-2xl mx-auto">
           <p className="text-sand-300 text-lg leading-relaxed">
-            Michelin-starred chefs don't accept 'good enough.' Neither does Mina.
-            Every hookah at Centerpiece follows the same obsession that drives a three-star kitchen.
+            At Centerpiece, Mina approaches hookah with the mindset of a chef
+            developing a signature dish. A great mix isn't created by simply combining
+            popular flavors. Mina experiments with proportions, leaf styles, temperature,
+            airflow and flavor progression — sometimes refining a combination repeatedly
+            before it earns a place on the Centerpiece menu.
+          </p>
+          <p className="text-sand-400 text-base leading-relaxed mt-4">
+            Sweetness has to complement acidity. Cooling notes need restraint. Fruit needs
+            dimension. Creamy profiles need balance. Even the way a flavor develops from the
+            first inhale to the final stages of the session matters.
           </p>
         </div>
 
@@ -398,16 +407,21 @@ export default function WhoWeArePage() {
         <div className="relative p-8 border border-amber-600/30 rounded-sm bg-gradient-to-br from-amber-950/30 to-[#1a1210]/60 text-center overflow-hidden">
           <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-500/50 to-transparent" aria-hidden="true" />
           <p className="text-amber-200 font-serif text-xl md:text-2xl leading-relaxed mb-3">
-            Centerpiece isn't a hookah lounge trying to be fancy.
+            It is a philosophy inspired by the same pursuit of refinement
+            associated with the world's best culinary experiences.
           </p>
           <p className="text-amber-100 font-serif text-xl md:text-2xl leading-relaxed">
-            It's a culinary laboratory disguised as a lounge.
+            Experiment relentlessly. Understand every ingredient.
+            Never serve something simply because it is "good enough."
           </p>
-          <div className="mt-6 flex flex-wrap justify-center gap-6 text-sand-400 text-sm">
-            <span className="flex items-center gap-2"><Star size={14} className="text-amber-500" aria-hidden="true" /> Every hookah is a tasting menu</span>
-            <span className="flex items-center gap-2"><Star size={14} className="text-amber-500" aria-hidden="true" /> Every flavor is a note in a composition</span>
-            <span className="flex items-center gap-2"><Star size={14} className="text-amber-500" aria-hidden="true" /> Every session is unforgettable</span>
-          </div>
+          <p className="text-sand-400 text-sm leading-relaxed mt-6">
+            That is the Michelin mindset behind Centerpiece. Not a Michelin award —
+            a standard of craftsmanship.
+          </p>
+          <p className="text-sand-600 text-xs leading-relaxed mt-3">
+            Michelin is used here as an analogy for philosophy and craftsmanship;
+            Centerpiece is not affiliated with or endorsed by the Michelin Guide.
+          </p>
         </div>
       </SectionWrapper>
 
@@ -418,8 +432,9 @@ export default function WhoWeArePage() {
         {/* Intro */}
         <div className="text-center mb-10 max-w-2xl mx-auto">
           <p className="text-sand-300 text-lg leading-relaxed">
-            A Michelin chef spends 80% of their time in R&D. Testing. Failing. Iterating.
-            Mina does the same — every week, without exception.
+            Experimentation, refinement, consistency. Mina tests and iterates every
+            week — adjusting ratios, leaf combinations, heat and airflow until a
+            mix earns its place on the menu.
           </p>
         </div>
 
@@ -481,6 +496,45 @@ export default function WhoWeArePage() {
             This is why you'll taste flavors at Centerpiece you literally can't find
             anywhere else in Southern California. <span className="text-amber-300 font-medium">We're not following the menu. We're writing it.</span>
           </p>
+        </div>
+      </SectionWrapper>
+
+      {/* ════════════════ SECTION 2.5: MINA — THE CURATOR ════════════════ */}
+      <SectionWrapper bg="#0E0C10" inView={curatorSection.inView} refEl={curatorSection.ref} maxW="max-w-4xl">
+        <SectionHeader kicker="Mina — The Curator" title="Behind Every Signature Mix Is a Process" icon={ChefHat} />
+
+        <div className="max-w-2xl mx-auto space-y-5 text-sand-300 text-base leading-relaxed">
+          <p>
+            Mina has spent years studying the details most people never think about
+            when smoking hookah.
+          </p>
+          <div className="space-y-2 text-sand-400 text-sm leading-relaxed pl-4 border-l border-amber-700/30">
+            <p>How does mango behave when paired with melon?</p>
+            <p>When does mint refresh a blend — and when does it overpower it?</p>
+            <p>How much cooling is enough?</p>
+            <p>Should a berry note arrive immediately or develop later in the session?</p>
+            <p>How does dark leaf change the body of a mix?</p>
+            <p>How does heat alter sweetness after thirty minutes?</p>
+          </div>
+          <p>
+            These are the questions behind the Centerpiece flavor program. Mina
+            continuously experiments with tobacco, ratios, bowls, heat-management
+            systems and flavor combinations to create sessions with balance,
+            progression and character.
+          </p>
+          <p>
+            The result is a collection of signature mixes that feel composed rather
+            than assembled.
+          </p>
+        </div>
+
+        <div className="mt-10 max-w-xl mx-auto">
+          <blockquote className="relative p-8 border border-amber-600/30 rounded-sm bg-gradient-to-br from-amber-950/25 to-[#1a1210]/60 text-center">
+            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-500/50 to-transparent" aria-hidden="true" />
+            <p className="text-amber-200 font-serif text-xl md:text-2xl leading-relaxed">
+              "A signature mix should have intention behind every note."
+            </p>
+          </blockquote>
         </div>
       </SectionWrapper>
 
