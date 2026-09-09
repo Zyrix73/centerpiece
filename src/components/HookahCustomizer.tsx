@@ -218,8 +218,8 @@ export default function HookahCustomizer({ open, onClose, mixes }: HookahCustomi
                       onClick={() => setSelectedMix(mix)}
                       className={`relative flex flex-col border rounded-sm overflow-hidden transition-all duration-300 text-left ${
                         isSelected
-                          ? 'border-amber-500 ring-1 ring-amber-500/40'
-                          : 'border-amber-900/30 hover:border-amber-700/50'
+                          ? 'border-amber-400 ring-1 ring-amber-400/50 sig-gold-card'
+                          : 'border-amber-600/50 sig-gold-card hover:border-amber-400/80'
                       }`}
                     >
                       {mix.image_url && (
@@ -233,12 +233,12 @@ export default function HookahCustomizer({ open, onClose, mixes }: HookahCustomi
                           <div className="absolute inset-0 bg-gradient-to-t from-[#1a1210] via-transparent to-transparent" aria-hidden="true" />
                         </div>
                       )}
-                      <div className="p-3 flex-1">
+                      <div className="p-3 flex-1 relative z-[2]">
                         <p className="font-serif text-amber-100 text-sm">{mix.name}</p>
                         <p className="text-amber-400/70 text-xs italic">{mix.tagline}</p>
                       </div>
                       {isSelected && (
-                        <div className="absolute top-2 right-2 w-6 h-6 rounded-full bg-amber-600 flex items-center justify-center">
+                        <div className="absolute top-2 right-2 w-6 h-6 rounded-full bg-amber-500 flex items-center justify-center z-[3]">
                           <Check size={14} className="text-white" />
                         </div>
                       )}
