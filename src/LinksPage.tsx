@@ -153,8 +153,8 @@ function HangingLantern({ side, delay = '0s' }: { side: 'left' | 'right'; delay?
 
 export default function LinksPage() {
   const links: LinkItem[] = [
-    { label: 'Our Website', href: '/', variant: 'default' },
     { label: 'Build My Hookah', href: '/build-my-hookah', variant: 'bordered', emoji: '🪔' },
+    { label: 'Our Website', href: '/', variant: 'default' },
   ];
 
   return (
@@ -222,10 +222,10 @@ export default function LinksPage() {
         <div className="w-full flex flex-col items-center gap-4">
           {/* Links */}
           <div className="w-full flex flex-col gap-2.5">
+            <MenuButton />
             {links.map((link) => (
               <Pill key={link.label} {...link} />
             ))}
-            <MenuButton />
             <Pill
               label="Review Us on Google"
               href="https://search.google.com/local/writereview?placeid=ChIJi-q_YJy7woARSXfqFxWEYDY"
