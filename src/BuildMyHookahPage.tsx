@@ -291,14 +291,14 @@ export default function BuildMyHookahPage() {
               <div className="grid grid-cols-1 gap-4">
                 <button
                   onClick={() => setTobaccoType('signature')}
-                  className="relative flex flex-col items-center gap-3 p-6 border border-amber-900/30 hover:border-amber-500/60 hover:bg-amber-900/10 rounded-sm transition-all duration-300 text-center"
+                  className="relative flex flex-col items-center gap-3 p-6 border-2 border-amber-400/60 rounded-sm transition-all duration-300 text-center sig-gold-card overflow-hidden hover:border-amber-300"
                 >
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center bg-amber-500/15 border border-amber-400/30">
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center bg-amber-500/20 border border-amber-400/50 relative z-[2]">
                     <Sparkles size={22} className="text-amber-300" />
                   </div>
-                  <div>
+                  <div className="relative z-[2]">
                     <p className="font-serif text-amber-100 text-lg">Signature Mixes</p>
-                    <p className="text-sand-400 text-xs mt-1">14 handcrafted house blends</p>
+                    <p className="text-amber-300/70 text-xs mt-1">14 handcrafted house blends</p>
                   </div>
                 </button>
                 <button
@@ -340,8 +340,8 @@ export default function BuildMyHookahPage() {
                         onClick={() => setSelectedMix(mix)}
                         className={`relative w-full flex flex-col border rounded-sm overflow-hidden transition-all duration-300 text-left ${
                           isSelected
-                            ? 'border-amber-500 ring-1 ring-amber-500/40'
-                            : 'border-amber-900/30 hover:border-amber-700/50'
+                            ? 'border-amber-400 ring-1 ring-amber-400/50 sig-gold-card'
+                            : 'border-amber-600/50 sig-gold-card hover:border-amber-400/80'
                         }`}
                       >
                         {mix.image_url && (
@@ -349,7 +349,7 @@ export default function BuildMyHookahPage() {
                             <img src={mix.image_url} alt={mix.name} className="w-full h-full object-cover object-center" loading="lazy" />
                           </div>
                         )}
-                        <div className="p-4 flex-1">
+                        <div className="p-4 flex-1 relative z-[2]">
                           <div className="flex items-center gap-2 flex-wrap">
                             <p className="font-serif text-amber-100 text-lg">{mix.name}</p>
                             <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] tracking-wider uppercase border ${CATEGORY_STYLES[category]?.pill ?? 'border-amber-400/40 text-amber-300 bg-amber-500/10'}`}>
@@ -360,7 +360,7 @@ export default function BuildMyHookahPage() {
                           <p className="text-sand-300/80 text-sm mt-2">{mix.description}</p>
                         </div>
                         {isSelected && (
-                          <div className="absolute top-3 right-3 w-7 h-7 rounded-full bg-amber-600 flex items-center justify-center shadow-lg">
+                          <div className="absolute top-3 right-3 w-7 h-7 rounded-full bg-amber-500 flex items-center justify-center shadow-lg z-[3]">
                             <Check size={16} className="text-white" />
                           </div>
                         )}
