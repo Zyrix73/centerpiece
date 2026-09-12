@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { ArrowLeft, ArrowRight, Check, Sparkles, Snowflake, Droplet, FlaskConical, Flame, Wind, X, Star, Gift, Dices } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Check, Sparkles, Snowflake, Droplet, FlaskConical, Flame, Wind, X, Star, Gift, Dices, ImagePlus } from 'lucide-react';
 import mixesData from './data/mixes.json';
 import { OrnamentDivider } from './components/PageShell';
 
@@ -81,7 +81,7 @@ const ADDON_OPTIONS = [
 
 const BASE_PRICE = 45;
 
-const STEPS = ['Meet Your Hookah', 'Premium Add-ons', 'Add-ons', 'Select Your Flavor'] as const;
+const STEPS = ['Meet Your Hookah', 'Select Your Flavor', 'Add-ons'] as const;
 
 export default function BuildMyHookahPage() {
   const [step, setStep] = useState(0);
@@ -190,79 +190,8 @@ export default function BuildMyHookahPage() {
           </div>
         )}
 
-        {/* Step 1: Premium add-ons come standard */}
+        {/* Step 1: Select your flavor */}
         {step === 1 && (
-          <div className="animate-fade-up">
-            <h2 className="font-serif text-2xl text-amber-100 mb-1">Premium Add-ons Come Standard</h2>
-            <p className="text-sand-400 text-sm mb-6">No selection required. These are standard at our lounge.</p>
-            <div className="space-y-3">
-              {STANDARD_ITEMS.map((item, idx) => {
-                const Icon = item.icon;
-                return (
-                  <div
-                    key={item.label}
-                    className="flex items-center gap-4 p-4 border border-amber-500/50 rounded-sm bg-gradient-to-r from-amber-900/30 to-amber-800/10 animate-fade-up"
-                    style={{ animationDelay: `${idx * 0.1}s`, animationFillMode: 'both' }}
-                  >
-                    <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 bg-amber-500 text-white shadow-[0_0_12px_rgba(245,158,11,0.4)]">
-                      <Icon size={18} />
-                    </div>
-                    <div className="flex-1">
-                      <p className="font-serif text-amber-100 text-base">{item.label}</p>
-                    </div>
-                    <span className="text-[10px] tracking-widest uppercase text-amber-300 border border-amber-400/40 px-2 py-0.5 rounded-sm bg-amber-500/10">
-                      Included
-                    </span>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        )}
-
-        {/* Step 2: Add-ons */}
-        {step === 2 && (
-          <div className="animate-fade-up">
-            <h2 className="font-serif text-2xl text-amber-100 mb-1">Add-ons</h2>
-            <p className="text-sand-400 text-sm mb-6">Enhance your session. Select any you'd like, or skip to the next step.</p>
-            <div className="space-y-3">
-              {ADDON_OPTIONS.map((opt) => {
-                const Icon = opt.icon;
-                const isSelected = selectedAddons.includes(opt.id);
-                return (
-                  <button
-                    key={opt.id}
-                    onClick={() => toggleAddon(opt.id)}
-                    className={`w-full flex items-center gap-4 p-4 border rounded-sm transition-all duration-300 text-left ${
-                      isSelected
-                        ? 'border-amber-500 bg-amber-600/15'
-                        : 'border-amber-900/30 hover:border-amber-700/50 bg-[#1a1210]/60'
-                    }`}
-                  >
-                    <div className={`w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 ${isSelected ? 'bg-amber-600 text-white' : 'bg-amber-900/20 text-amber-400'}`}>
-                      <Icon size={18} />
-                    </div>
-                    <div className="flex-1">
-                      <p className="font-serif text-amber-100 text-base">{opt.label}</p>
-                      <p className="text-sand-400 text-xs leading-relaxed mt-0.5">{opt.desc}</p>
-                    </div>
-                    <span className="text-amber-400 font-serif text-base font-bold flex-shrink-0">+${opt.price}</span>
-                    {isSelected && <Check size={18} className="text-amber-400 flex-shrink-0" />}
-                  </button>
-                );
-              })}
-            </div>
-            <button
-              onClick={() => setStep(2)}
-              className="mt-4 w-full text-center text-sand-400 hover:text-amber-300 text-sm tracking-widest uppercase transition-colors py-2"
-            >
-              Skip to next step →
-            </button>
-          </div>
-        )}
-
-        {/* Step 3: Select your flavor */}
-        {step === 3 && (
           <div className="animate-fade-up">
             <h2 className="font-serif text-2xl text-amber-100 mb-1">Select Your Flavor</h2>
             <p className="text-sand-400 text-sm mb-6">Choose your tobacco type, then pick a flavor.</p>
@@ -353,6 +282,41 @@ export default function BuildMyHookahPage() {
             )}
           </div>
         )}
+
+        {/* Step 2: Add-ons */}
+        {step === 2 && (
+          <div className="animate-fade-up">
+            <h2 className="font-serif text-2xl text-amber-100 mb-1">Add-ons</h2>
+            <p className="text-sand-400 text-sm mb-6">Enhance your session. Select any you'd like, or skip to the next step.</p>
+            <div className="space-y-3">
+              {ADDON_OPTIONS.map((opt) => {
+                const Icon = opt.icon;
+                const isSelected = selectedAddons.includes(opt.id);
+                return (
+                  <button
+                    key={opt.id}
+                    onClick={() => toggleAddon(opt.id)}
+                    className={`w-full flex items-center gap-4 p-4 border rounded-sm transition-all duration-300 text-left ${
+                      isSelected
+                        ? 'border-amber-500 bg-amber-600/15'
+                        : 'border-amber-900/30 hover:border-amber-700/50 bg-[#1a1210]/60'
+                    }`}
+                  >
+                    <div className="w-14 h-14 rounded-sm flex items-center justify-center flex-shrink-0 bg-[#0e0a08] border border-amber-900/40 overflow-hidden">
+                      <ImagePlus size={22} className="text-amber-800/60" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="font-serif text-amber-100 text-base">{opt.label}</p>
+                      <p className="text-sand-400 text-xs leading-relaxed mt-0.5">{opt.desc}</p>
+                    </div>
+                    <span className="text-amber-400 font-serif text-base font-bold flex-shrink-0">+${opt.price}</span>
+                    {isSelected && <Check size={18} className="text-amber-400 flex-shrink-0" />}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Bottom navigation */}
@@ -370,12 +334,25 @@ export default function BuildMyHookahPage() {
             <span className="w-20" />
           )}
 
-          {step < 3 ? (
+          {step < 2 ? (
             <div className="flex items-center gap-3">
-              {(step === 0 || step === 1) && (
+              {step === 0 && (
                 <span className="text-amber-300/70 text-[11px] tracking-wide animate-pulse">
                   No selection needed
                 </span>
+              )}
+              {step === 1 && tobaccoType && (
+                <button
+                  onClick={() => {
+                    const pool = tobaccoType === 'signature' ? MIXES : DARK_LEAF_MIXES;
+                    setSelectedMix(pool[Math.floor(Math.random() * pool.length)]);
+                  }}
+                  className="flex items-center gap-2 px-3 py-2.5 text-[11px] tracking-widest uppercase rounded-sm border border-amber-500/50 text-amber-300 hover:bg-amber-600/20 hover:border-amber-400 transition-all duration-300"
+                >
+                  <Dices size={14} />
+                  <span className="hidden sm:inline">Can't decide? Surprise Me</span>
+                  <span className="sm:hidden">Surprise Me</span>
+                </button>
               )}
               <button
                 onClick={() => canAdvance && setStep((s) => s + 1)}
@@ -391,19 +368,6 @@ export default function BuildMyHookahPage() {
             </div>
           ) : (
             <div className="flex items-center gap-2">
-              {tobaccoType && (
-                <button
-                  onClick={() => {
-                    const pool = tobaccoType === 'signature' ? MIXES : DARK_LEAF_MIXES;
-                    setSelectedMix(pool[Math.floor(Math.random() * pool.length)]);
-                  }}
-                  className="flex items-center gap-2 px-3 py-2.5 text-[11px] tracking-widest uppercase rounded-sm border border-amber-500/50 text-amber-300 hover:bg-amber-600/20 hover:border-amber-400 transition-all duration-300"
-                >
-                  <Dices size={14} />
-                  <span className="hidden sm:inline">Can't decide? Surprise Me</span>
-                  <span className="sm:hidden">Surprise Me</span>
-                </button>
-              )}
               <button
                 onClick={handleReady}
                 disabled={!selectedMix}
