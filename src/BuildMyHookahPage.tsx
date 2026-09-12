@@ -73,7 +73,7 @@ const STANDARD_ITEMS = [
 ];
 
 const ADDON_OPTIONS = [
-  { id: 'ice-hose', label: 'Ice Hose', price: 8, icon: Snowflake, desc: 'Delivers a cooler, smoother draw for a crisp, refreshing session.' },
+  { id: 'ice-hose', label: 'Ice Hose', price: 8, icon: Snowflake, desc: 'Delivers a cooler, smoother draw for a crisp, refreshing session.', image: '/images/ice-tip.webp' },
   { id: 'ice-vase', label: 'Ice Vase', price: 5, icon: Droplet, desc: 'Keeps your hookah chilled longer for a cooler, smoother experience.', image: '/images/ice-vase.webp' },
   { id: 'cbd-oil', label: 'CBD Oil', price: 10, icon: FlaskConical, desc: 'Adds a CBD-infused touch for a more mellow, laid-back session.' },
   { id: 'thc-oil', label: 'THC Oil', price: 10, icon: Droplet, desc: 'Adds a THC-infused upgrade for a more elevated session experience.' },
