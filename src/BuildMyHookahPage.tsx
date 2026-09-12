@@ -175,36 +175,17 @@ export default function BuildMyHookahPage() {
         {/* Step 0: Meet your hookah */}
         {step === 0 && (
           <div className="animate-fade-up">
-            <h2 className="font-serif text-2xl text-amber-100 mb-1">Meet Your Hookah</h2>
-            <p className="text-sand-400 text-sm mb-6">No selection needed — this is the pipe every session starts on.</p>
-            <div className="relative rounded-sm overflow-hidden border border-amber-500/30 mb-5">
+            <div className="relative rounded-sm overflow-hidden border border-amber-500/30">
               <img
                 src="/images/Wookah-hookah-square.webp"
-                alt="Wookah hookah — handcrafted stainless steel and wood body"
+                alt="Wookah hookah - handcrafted stainless steel and wood body"
                 className="w-full h-[480px] object-contain bg-[#0e0a08]"
                 loading="lazy"
               />
               <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#120d0b] to-transparent pointer-events-none" aria-hidden="true" />
               <div className="absolute bottom-0 left-0 right-0 p-4">
                 <p className="font-serif text-amber-200 text-lg">Wookah Hookah</p>
-                <span className="text-[10px] tracking-widest uppercase text-amber-300/80 border border-amber-400/40 px-2 py-0.5 rounded-sm bg-amber-500/10 inline-block mt-1">
-                  Premium Upgrade — Included Standard
-                </span>
               </div>
-            </div>
-            <div className="space-y-4 text-sand-300 text-sm leading-relaxed">
-              <p>
-                The body includes a downstem with a demountable diffuser. The use of the
-                diffuser makes the smoking experience soft, pleasant and quiet, so you will
-                be able to enjoy an undisturbed hookah session. In case you like the
-                “standard sound of WOOKAH”, you can easily remove it.
-              </p>
-              <p>
-                Made of high quality 1.4301 (V2A) stainless steel which is easily
-                washable, highly durable, reduces the likelihood of corrosion and does not
-                absorb smells. Handmade in Europe, from the finest stainless steel and
-                wood accent.
-              </p>
             </div>
           </div>
         )}
