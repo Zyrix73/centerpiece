@@ -74,7 +74,7 @@ const STANDARD_ITEMS = [
 
 const ADDON_OPTIONS = [
   { id: 'ice-hose', label: 'Ice Hose', price: 8, icon: Snowflake, desc: 'Delivers a cooler, smoother draw for a crisp, refreshing session.' },
-  { id: 'ice-vase', label: 'Ice Vase', price: 5, icon: Droplet, desc: 'Keeps your hookah chilled longer for a cooler, smoother experience.' },
+  { id: 'ice-vase', label: 'Ice Vase', price: 5, icon: Droplet, desc: 'Keeps your hookah chilled longer for a cooler, smoother experience.', image: '/images/ice-vase.webp' },
   { id: 'cbd-oil', label: 'CBD Oil', price: 10, icon: FlaskConical, desc: 'Adds a CBD-infused touch for a more mellow, laid-back session.' },
   { id: 'thc-oil', label: 'THC Oil', price: 10, icon: Droplet, desc: 'Adds a THC-infused upgrade for a more elevated session experience.' },
 ];
@@ -302,8 +302,12 @@ export default function BuildMyHookahPage() {
                         : 'border-amber-900/30 hover:border-amber-700/50 bg-[#1a1210]/60'
                     }`}
                   >
-                    <div className="w-1/3 min-w-[100px] flex-shrink-0 bg-[#0e0a08] flex items-center justify-center border-r border-amber-900/40 relative">
-                      <ImagePlus size={28} className="text-amber-800/60" />
+                    <div className="w-1/3 min-w-[100px] flex-shrink-0 bg-[#0e0a08] flex items-center justify-center border-r border-amber-900/40 relative overflow-hidden">
+                      {opt.image ? (
+                        <img src={opt.image} alt={opt.label} className="w-full h-full object-cover" loading="lazy" />
+                      ) : (
+                        <ImagePlus size={28} className="text-amber-800/60" />
+                      )}
                       {isSelected && (
                         <div className="absolute top-2 right-2 w-6 h-6 rounded-full bg-amber-500 flex items-center justify-center shadow-lg">
                           <Check size={14} className="text-white" />
