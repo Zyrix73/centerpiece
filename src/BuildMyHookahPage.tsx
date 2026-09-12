@@ -250,8 +250,8 @@ export default function BuildMyHookahPage() {
                         onClick={() => setSelectedMix(mix)}
                         className={`relative w-full flex flex-col border rounded-sm overflow-hidden transition-all duration-300 text-left ${
                           isSelected
-                            ? 'border-amber-400 ring-1 ring-amber-400/50 sig-gold-card'
-                            : 'border-amber-600/50 sig-gold-card hover:border-amber-400/80'
+                            ? 'border-amber-400 ring-1 ring-amber-400/50'
+                            : 'border-amber-600/50 hover:border-amber-400/80'
                         }`}
                       >
                         {mix.image_url && (
