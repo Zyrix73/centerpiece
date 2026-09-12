@@ -179,7 +179,7 @@ export default function BuildMyHookahPage() {
               <img
                 src="/images/Wookah-hookah-square.webp"
                 alt="Wookah hookah - handcrafted stainless steel and wood body"
-                className="w-full h-[480px] object-contain bg-[#0e0a08]"
+                className="w-full h-[480px] object-cover object-center"
                 loading="lazy"
               />
               <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#120d0b] to-transparent pointer-events-none" aria-hidden="true" />
