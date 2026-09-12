@@ -296,21 +296,27 @@ export default function BuildMyHookahPage() {
                   <button
                     key={opt.id}
                     onClick={() => toggleAddon(opt.id)}
-                    className={`w-full flex items-center gap-4 p-4 border rounded-sm transition-all duration-300 text-left ${
+                    className={`w-full flex border rounded-sm overflow-hidden transition-all duration-300 text-left ${
                       isSelected
                         ? 'border-amber-500 bg-amber-600/15'
                         : 'border-amber-900/30 hover:border-amber-700/50 bg-[#1a1210]/60'
                     }`}
                   >
-                    <div className="w-14 h-14 rounded-sm flex items-center justify-center flex-shrink-0 bg-[#0e0a08] border border-amber-900/40 overflow-hidden">
-                      <ImagePlus size={22} className="text-amber-800/60" />
+                    <div className="w-1/3 min-w-[100px] flex-shrink-0 bg-[#0e0a08] flex items-center justify-center border-r border-amber-900/40 relative">
+                      <ImagePlus size={28} className="text-amber-800/60" />
+                      {isSelected && (
+                        <div className="absolute top-2 right-2 w-6 h-6 rounded-full bg-amber-500 flex items-center justify-center shadow-lg">
+                          <Check size={14} className="text-white" />
+                        </div>
+                      )}
                     </div>
-                    <div className="flex-1">
-                      <p className="font-serif text-amber-100 text-base">{opt.label}</p>
-                      <p className="text-sand-400 text-xs leading-relaxed mt-0.5">{opt.desc}</p>
+                    <div className="flex-1 p-4 flex flex-col justify-center">
+                      <div className="flex items-start justify-between gap-2">
+                        <p className="font-serif text-amber-100 text-base">{opt.label}</p>
+                        <span className="text-amber-400 font-serif text-base font-bold flex-shrink-0">+${opt.price}</span>
+                      </div>
+                      <p className="text-sand-400 text-xs leading-relaxed mt-1">{opt.desc}</p>
                     </div>
-                    <span className="text-amber-400 font-serif text-base font-bold flex-shrink-0">+${opt.price}</span>
-                    {isSelected && <Check size={18} className="text-amber-400 flex-shrink-0" />}
                   </button>
                 );
               })}
