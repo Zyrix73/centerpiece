@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { ArrowLeft, ArrowRight, Check, Sparkles, Snowflake, Droplet, FlaskConical, Wind, X, Star, Gift, Dices, ImagePlus } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Check, Sparkles, Snowflake, Droplet, FlaskConical, Flame, Wind, X, Star, Gift, Dices, ImagePlus } from 'lucide-react';
 import mixesData from './data/mixes.json';
 import { OrnamentDivider } from './components/PageShell';
 
