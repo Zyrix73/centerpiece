@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { ArrowLeft, ArrowRight, Check, Sparkles, Snowflake, Droplet, FlaskConical, Flame, Wind, X, Star, Gift, Dices, ImagePlus } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Check, Sparkles, Snowflake, Droplet, FlaskConical, Wind, X, Star, Gift, Dices, ImagePlus } from 'lucide-react';
 import mixesData from './data/mixes.json';
 import { OrnamentDivider } from './components/PageShell';
 
@@ -15,36 +15,6 @@ interface Mix {
 }
 
 const MIXES: Mix[] = (mixesData as { mixes: Mix[] }).mixes;
-
-const DARK_LEAF_MIXES: Mix[] = [
-  {
-    id: 101,
-    name: 'Dark Side',
-    flavors: 'Dark Leaf',
-    description: 'Bold, robust dark leaf tobacco for those who want an authentic, heavy smoke.',
-    tagline: 'For the purists.',
-    category: 'Dark Leaf',
-    sort_order: 1,
-  },
-  {
-    id: 102,
-    name: 'Must Have',
-    flavors: 'Dark Leaf',
-    description: 'A must-try dark leaf blend with rich, deep flavor and a strong buzz.',
-    tagline: 'The essential dark leaf.',
-    category: 'Dark Leaf',
-    sort_order: 2,
-  },
-  {
-    id: 103,
-    name: 'Seberro',
-    flavors: 'Dark Leaf',
-    description: 'A premium dark leaf with a smooth yet intense profile for experienced smokers.',
-    tagline: 'Intense and refined.',
-    category: 'Dark Leaf',
-    sort_order: 3,
-  },
-];
 
 const CATEGORY_STYLES: Record<string, { dot: string; pill: string }> = {
   'Fruity & Icy': {
@@ -87,7 +57,6 @@ export default function BuildMyHookahPage() {
   const [step, setStep] = useState(0);
   const [selectedAddons, setSelectedAddons] = useState<string[]>([]);
   const [selectedMix, setSelectedMix] = useState<Mix | null>(null);
-  const [tobaccoType, setTobaccoType] = useState<'signature' | 'dark-leaf' | null>(null);
   const [showSummary, setShowSummary] = useState(false);
   const [building, setBuilding] = useState(false);
   const flavorRefs = useRef<Record<number, HTMLDivElement | null>>({});
@@ -103,7 +72,7 @@ export default function BuildMyHookahPage() {
   };
 
   const addonTotal = ADDON_OPTIONS.filter((a) => selectedAddons.includes(a.id)).reduce((sum, a) => sum + a.price, 0);
-  const flavorPrice = tobaccoType === 'dark-leaf' ? 49 : BASE_PRICE;
+  const flavorPrice = BASE_PRICE;
   const totalPrice = flavorPrice + addonTotal;
 
   const handleReady = () => {
@@ -194,58 +163,19 @@ export default function BuildMyHookahPage() {
         {step === 1 && (
           <div className="animate-fade-up">
             <h2 className="font-serif text-2xl text-amber-100 mb-1">Select Your Flavor</h2>
-            <p className="text-sand-400 text-sm mb-6">Choose your tobacco type, then pick a flavor.</p>
+            <p className="text-sand-400 text-sm mb-6">Pick from our handcrafted signature mixes.</p>
 
-            {/* Tobacco type selector */}
-            {!tobaccoType && (
-              <div className="grid grid-cols-1 gap-4">
-                <button
-                  onClick={() => setTobaccoType('signature')}
-                  className="relative flex flex-col items-center gap-3 p-6 border-2 border-amber-400/60 rounded-sm transition-all duration-300 text-center sig-gold-card overflow-hidden hover:border-amber-300"
-                >
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center bg-amber-500/20 border border-amber-400/50 relative z-[2]">
-                    <Sparkles size={22} className="text-amber-300" />
-                  </div>
-                  <div className="relative z-[2]">
-                    <p className="font-serif text-amber-100 text-lg">Signature Mixes</p>
-                    <p className="text-amber-300/70 text-xs mt-1">14 handcrafted house blends</p>
-                  </div>
-                </button>
-                <button
-                  onClick={() => setTobaccoType('dark-leaf')}
-                  className="relative flex flex-col items-center gap-3 p-6 border border-amber-900/30 hover:border-amber-500/60 hover:bg-amber-900/10 rounded-sm transition-all duration-300 text-center"
-                >
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center bg-amber-900/20 border border-amber-700/40">
-                    <Flame size={22} className="text-amber-400" />
-                  </div>
-                  <div>
-                    <p className="font-serif text-amber-100 text-lg">Dark Leaf</p>
-                    <p className="text-sand-400 text-xs mt-1">3 bold, high-buzz blends</p>
-                  </div>
-                </button>
-              </div>
-            )}
-
-            {/* Flavor list after type selected */}
-            {tobaccoType && (
-              <div className="animate-fade-up">
-                <div className="flex items-center justify-between mb-4">
-                  <button
-                    onClick={() => { setTobaccoType(null); setSelectedMix(null); }}
-                    className="flex items-center gap-2 text-sand-400 hover:text-amber-300 text-xs tracking-widest uppercase transition-colors"
-                  >
-                    <ArrowLeft size={14} />
-                    {tobaccoType === 'signature' ? 'Signature Mixes' : 'Dark Leaf'}
-                  </button>
-                  <span className="text-amber-300/60 text-[10px] tracking-widest uppercase">
-                    {tobaccoType === 'signature' ? `${MIXES.length} flavors` : `${DARK_LEAF_MIXES.length} flavors`}
-                  </span>
-                </div>
-                {(tobaccoType === 'signature' ? MIXES : DARK_LEAF_MIXES).map((mix) => {
+            <div className="flex items-center justify-between mb-4">
+              <span className="text-amber-300/60 text-[10px] tracking-widest uppercase">
+                {MIXES.length} flavors
+              </span>
+            </div>
+            <div className="animate-fade-up">
+              {MIXES.map((mix) => {
                   const isSelected = selectedMix?.id === mix.id;
-                  const category = mix.category;
-                  return (
-                    <div key={mix.id} ref={(el) => { flavorRefs.current[mix.id] = el; }} className="mb-4">
+              const category = mix.category;
+              return (
+                <div key={mix.id} ref={(el) => { flavorRefs.current[mix.id] = el; }} className="mb-4">
                       <button
                         onClick={() => setSelectedMix(mix)}
                         className={`relative w-full flex flex-col border rounded-sm overflow-hidden transition-all duration-300 text-left ${
@@ -274,12 +204,11 @@ export default function BuildMyHookahPage() {
                             <Check size={16} className="text-white" />
                           </div>
                         )}
-                      </button>
-                    </div>
-                  );
-                })}
-              </div>
-            )}
+                    </button>
+                  </div>
+              );
+            })}
+            </div>
           </div>
         )}
 
@@ -351,11 +280,10 @@ export default function BuildMyHookahPage() {
                   No selection needed
                 </span>
               )}
-              {step === 1 && tobaccoType && (
+              {step === 1 && (
                 <button
                   onClick={() => {
-                    const pool = tobaccoType === 'signature' ? MIXES : DARK_LEAF_MIXES;
-                    setSelectedMix(pool[Math.floor(Math.random() * pool.length)]);
+                    setSelectedMix(MIXES[Math.floor(Math.random() * MIXES.length)]);
                   }}
                   className="flex items-center gap-2 px-3 py-2.5 text-[11px] tracking-widest uppercase rounded-sm border border-amber-500/50 text-amber-300 hover:bg-amber-600/20 hover:border-amber-400 transition-all duration-300"
                 >
