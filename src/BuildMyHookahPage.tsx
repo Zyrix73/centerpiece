@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { ArrowLeft, ArrowRight, Check, Sparkles, Snowflake, Droplet, FlaskConical, Flame, Wind, X, Star, Gift, Dices, ImagePlus } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Check, Sparkles, Snowflake, Droplet, FlaskConical, Flame, Wind, X, Star, Gift, Dices, ImagePlus, Smartphone } from 'lucide-react';
 import mixesData from './data/mixes.json';
 import { OrnamentDivider } from './components/PageShell';
 
@@ -451,9 +451,18 @@ export default function BuildMyHookahPage() {
                 </div>
               </div>
 
-              <p className="text-amber-200/90 italic text-sm text-center mt-5">
-                Ask your server to build this for you.
-              </p>
+              {/* Show-your-server call-to-action */}
+              <div className="mt-5 rounded-sm border border-amber-500/40 bg-amber-900/15 p-4 text-center">
+                <div className="flex items-center justify-center gap-2 mb-2">
+                  <div className="flex items-center justify-center w-8 h-8 rounded-full bg-amber-500/20 border border-amber-400/40 animate-pulse">
+                    <Smartphone size={16} className="text-amber-300" />
+                  </div>
+                </div>
+                <p className="font-serif text-amber-200 text-base font-semibold">Show this screen to your server</p>
+                <p className="text-sand-300 text-xs leading-relaxed mt-1">
+                  Your server will build your hookah based on what you see above. This is not an automatic order — just show them your phone.
+                </p>
+              </div>
             </div>
 
             <div className="px-5 pb-5">
@@ -462,7 +471,7 @@ export default function BuildMyHookahPage() {
                 className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-amber-600 hover:bg-amber-500 text-white text-sm tracking-widest uppercase font-semibold rounded-sm transition-all duration-300"
               >
                 <Check size={16} />
-                Done
+                Show Your Server
               </a>
             </div>
           </div>
