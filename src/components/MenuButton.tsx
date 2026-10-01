@@ -11,7 +11,7 @@ function isAfterHours() {
       hour12: false,
     }).format(new Date()),
   );
-  return laHour >= 0 && laHour < 4;
+  return laHour >= 1 && laHour < 4;
 }
 
 export default function MenuButton() {
