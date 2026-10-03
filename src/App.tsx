@@ -1,6 +1,8 @@
+// Single-line comment
 import { useState, useEffect, useRef } from 'react';
 import { Menu, X, Star, Instagram, Facebook, Twitter, ImagePlus } from 'lucide-react';
 import mixesData from './data/mixes.json';
+
 
 interface Mix {
   id: number;
