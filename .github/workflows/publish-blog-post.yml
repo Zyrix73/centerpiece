@@ -1,0 +1,95 @@
+name: Publish scheduled blog post
+
+# Every Sunday at 15:00 UTC (8:00 AM Pacific in summer, 7:00 AM in winter).
+# Finds the article in src/data/blogPosts.ts whose publishDate equals today's
+# date (Los Angeles time) and flips its status from 'upcoming' to 'published'.
+# The commit triggers the normal Cloudflare Pages build and deploy.
+on:
+  schedule:
+    - cron: "0 15 * * 0"
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Publish the article dated YYYY-MM-DD (leave blank for today)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Flip today's article to published
+        id: flip
+        env:
+          DATE_OVERRIDE: ${{ github.event.inputs.date }}
+        run: |
+          node <<'EOF'
+          const fs = require('fs');
+          const FILE = 'src/data/blogPosts.ts';
+
+          const today = (process.env.DATE_OVERRIDE || '').trim() ||
+            new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Los_Angeles' }).format(new Date());
+          if (!/^\d{4}-\d{2}-\d{2}$/.test(today)) {
+            console.error(`Invalid date "${today}" - use YYYY-MM-DD.`);
+            process.exit(1);
+          }
+          console.log(`Looking for an article with publishDate '${today}'`);
+
+          const src = fs.readFileSync(FILE, 'utf8');
+          const marker = `publishDate: '${today}'`;
+          const at = src.indexOf(marker);
+          if (at === -1) {
+            console.log('No article is scheduled for this date. Nothing to do.');
+            fs.appendFileSync(process.env.GITHUB_OUTPUT, 'changed=false\n');
+            process.exit(0);
+          }
+          if (src.indexOf(marker, at + 1) !== -1) {
+            console.error(`More than one article has publishDate '${today}'. Fix the dates, then re-run.`);
+            process.exit(1);
+          }
+
+          // Bounds of this one post object inside the blogPosts array.
+          const start = src.lastIndexOf('\n  {', at);
+          const endIdx = src.indexOf('\n  },', at);
+          if (start === -1 || endIdx === -1) {
+            console.error('Could not find the article object around the matching date.');
+            process.exit(1);
+          }
+          const end = endIdx + '\n  },'.length;
+          const block = src.slice(start, end);
+          const slug = (block.match(/slug:\s*'([^']+)'/) || [])[1] || '(unknown slug)';
+
+          if (/status:\s*'published'/.test(block)) {
+            console.log(`"${slug}" is already published. Nothing to do.`);
+            fs.appendFileSync(process.env.GITHUB_OUTPUT, 'changed=false\n');
+            process.exit(0);
+          }
+          if (!/status:\s*'upcoming'/.test(block)) {
+            console.error(`"${slug}" has no status: 'upcoming' line to change.`);
+            process.exit(1);
+          }
+          if (/content:\s*\[\s*\]/.test(block)) {
+            console.error(`"${slug}" has no article text (content: []). NOT publishing an empty page.`);
+            console.error('Push the finished article from Bolt to GitHub, then re-run this workflow with this date.');
+            process.exit(1);
+          }
+
+          const updated = block.replace(/status:\s*'upcoming'/, "status: 'published'");
+          fs.writeFileSync(FILE, src.slice(0, start) + updated + src.slice(end));
+          console.log(`Published "${slug}".`);
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `changed=true\nslug=${slug}\n`);
+          EOF
+
+      - name: Commit and push
+        if: steps.flip.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add src/data/blogPosts.ts
+          git commit -m "Publish blog post: ${{ steps.flip.outputs.slug }}"
+          git push
