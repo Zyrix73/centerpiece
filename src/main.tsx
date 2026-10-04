@@ -8,6 +8,9 @@ import VisitUsPage from './VisitUsPage.tsx';
 import MenuPage from './MenuPage.tsx';
 import BuildMyHookahPage from './BuildMyHookahPage.tsx';
 import EventsPage from './EventsPage.tsx';
+import BlogPage from './BlogPage.tsx';
+import BlogPostPage from './BlogPostPage.tsx';
+import { getPostBySlug } from './data/blogPosts';
 import './index.css';
 
 const path = window.location.pathname;
@@ -20,6 +23,14 @@ else if (path === '/visit-us') page = <VisitUsPage />;
 else if (path === '/menu') page = <MenuPage />;
 else if (path === '/build-my-hookah') page = <BuildMyHookahPage />;
 else if (path === '/private-events') page = <EventsPage />;
+else if (path === '/blog') page = <BlogPage />;
+else if (path.startsWith('/blog/') && path !== '/blog/') {
+  const slug = path.replace('/blog/', '');
+  const post = getPostBySlug(slug);
+  page = post && post.status === 'published'
+    ? <BlogPostPage slug={slug} />
+    : <BlogPostPage slug="__notfound__" />;
+}
 else page = <App />;
 
 createRoot(document.getElementById('root')!).render(

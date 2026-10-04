@@ -7,6 +7,7 @@ const NAV_LINKS = [
   { label: 'Premium Hookah', href: '/premium-hookah' },
   { label: 'Visit Us', href: '/visit-us' },
   { label: 'Private Events', href: '/private-events' },
+  { label: 'Blog', href: '/blog' },
 ];
 
 function OrnamentDivider() {

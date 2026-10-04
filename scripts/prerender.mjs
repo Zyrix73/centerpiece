@@ -4,6 +4,7 @@ import { createServer } from 'node:http';
 import { resolve, dirname, join, extname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import puppeteer from 'puppeteer';
+import { getPublishedPosts } from '../src/data/blogPosts.ts';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const distDir = resolve(__dirname, '..', 'dist');
@@ -72,7 +73,29 @@ const ROUTES = [
     ogDescription: 'Book Centerpiece Hookah Lounge in Westwood, Los Angeles for private parties, corporate events, and film or photo productions. Open-floor Moroccan-styled lounge minutes from UCLA. Call Mina at (310) 977-0780 for a custom quote.',
     canonical: 'https://centerpiecehookahlounge.com/private-events',
   },
+  {
+    path: '/blog',
+    file: 'blog.html',
+    title: 'Hookah Blog | Guides, Tips & Culture — Centerpiece Hookah Lounge',
+    description: 'In-depth articles about all things hookah — beginner guides, shisha education, equipment reviews, flavor pairings, and hookah culture from Centerpiece Hookah Lounge in Westwood, Los Angeles.',
+    ogTitle: 'Hookah Blog | Guides, Tips & Culture — Centerpiece Hookah Lounge',
+    ogDescription: 'In-depth articles about all things hookah — beginner guides, shisha education, equipment reviews, flavor pairings, and hookah culture.',
+    canonical: 'https://centerpiecehookahlounge.com/blog',
+  },
 ];
+
+const publishedPosts = getPublishedPosts();
+for (const post of publishedPosts) {
+  ROUTES.push({
+    path: `/blog/${post.slug}`,
+    file: `blog/${post.slug}.html`,
+    title: post.metaTitle,
+    description: post.metaDescription,
+    ogTitle: post.metaTitle,
+    ogDescription: post.metaDescription,
+    canonical: `https://centerpiecehookahlounge.com/blog/${post.slug}`,
+  });
+}
 
 const MIME = {
   '.html': 'text/html',
