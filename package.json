@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "prebuild": "node scripts/fetch-mixes.mjs && node scripts/fetch-food.mjs && node scripts/fetch-drinks.mjs",
-    "build": "vite build && node scripts/generate-sitemap.mjs && node scripts/prerender.mjs",
+    "build": "vite build && node --experimental-strip-types scripts/generate-sitemap.mjs && node --experimental-strip-types scripts/prerender.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit -p tsconfig.app.json"
