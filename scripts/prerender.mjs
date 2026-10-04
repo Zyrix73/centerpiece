@@ -94,6 +94,8 @@ for (const post of publishedPosts) {
     ogTitle: post.metaTitle,
     ogDescription: post.metaDescription,
     canonical: `https://centerpiecehookahlounge.com/blog/${post.slug}`,
+    ogImage: post.heroImage,
+    ogType: 'article',
   });
 }
 
@@ -199,6 +201,35 @@ function injectMeta(html, route) {
 
   // Replace twitter:description
   html = html.replace(/<meta\s+name="twitter:description"\s+content="[^"]*"\s*\/?>/, `<meta name="twitter:description" content="${route.ogDescription}" />`);
+
+  // Replace og:image
+  if (route.ogImage) {
+    const ogImageRegex = /<meta\s+property="og:image"\s+content="[^"]*"\s*\/?>/;
+    if (ogImageRegex.test(html)) {
+      html = html.replace(ogImageRegex, `<meta property="og:image" content="${route.ogImage}" />`);
+    } else {
+      html = html.replace('</head>', `  <meta property="og:image" content="${route.ogImage}" />\n</head>`);
+    }
+  }
+
+  // Replace twitter:image
+  if (route.ogImage) {
+    const twitterImageRegex = /<meta\s+name="twitter:image"\s+content="[^"]*"\s*\/?>/;
+    if (twitterImageRegex.test(html)) {
+      html = html.replace(twitterImageRegex, `<meta name="twitter:image" content="${route.ogImage}" />`);
+    } else {
+      html = html.replace('</head>', `  <meta name="twitter:image" content="${route.ogImage}" />\n</head>`);
+    }
+  }
+
+  // Replace or insert og:type
+  const ogType = route.ogType || 'website';
+  const ogTypeRegex = /<meta\s+property="og:type"\s+content="[^"]*"\s*\/?>/;
+  if (ogTypeRegex.test(html)) {
+    html = html.replace(ogTypeRegex, `<meta property="og:type" content="${ogType}" />`);
+  } else {
+    html = html.replace('</head>', `  <meta property="og:type" content="${ogType}" />\n</head>`);
+  }
 
   return html;
 }

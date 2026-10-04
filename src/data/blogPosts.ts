@@ -1,5 +1,5 @@
 export interface BlogContentBlock {
-  type: 'paragraph' | 'heading' | 'image' | 'list';
+  type: 'paragraph' | 'heading' | 'subheading' | 'image' | 'list';
   text?: string;
   src?: string;
   alt?: string;
@@ -20,6 +20,11 @@ export interface BlogPost {
   heroImage: string;
   heroImageAlt: string;
   content: BlogContentBlock[];
+  quickAnswer?: string;
+  faqs?: { question: string; answer: string }[];
+  sources?: { title: string; url: string }[];
+  author?: string;
+  updatedDate?: string;
 }
 
 export const blogPosts: BlogPost[] = [
