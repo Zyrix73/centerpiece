@@ -1030,8 +1030,8 @@ export const blogPosts: BlogPost[] = [
     status: 'upcoming',
     author: 'Mina',
     updatedDate: '2026-11-15',
-    heroImage: 'https://images.pexels.com/photos/7518765/pexels-photo-7518765.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-    heroImageAlt: 'Premium hookahs displayed on a bar counter with natural coconut coals glowing warmly',
+    heroImage: 'https://images.pexels.com/photos/12568621/pexels-photo-12568621.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    heroImageAlt: 'Close-up of glowing charcoal cubes on a metal plate, showing natural coconut coals used for hookah',
     quickAnswer: "Natural [coconut coals](https://en.wikipedia.org/wiki/Coconut_charcoal) make a better session than quick-light coals. They burn longer (60 to 90 minutes vs. 20 to 30), produce no chemical taste, deliver more even heat, and generate thicker, cleaner clouds. Quick-light coals contain [accelerants](https://en.wikipedia.org/wiki/Accelerant) that contaminate the shisha flavor. Every premium hookah lounge — including Centerpiece — uses natural coconut coals exclusively.",
     faqs: [
       {
@@ -1551,8 +1551,8 @@ export const blogPosts: BlogPost[] = [
     status: 'upcoming',
     author: 'Mina',
     updatedDate: '2026-12-06',
-    heroImage: 'https://images.pexels.com/photos/7518749/pexels-photo-7518749.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-    heroImageAlt: 'A collection of elegant hookahs displayed with warm bokeh lighting',
+    heroImage: 'https://images.pexels.com/photos/8755068/pexels-photo-8755068.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    heroImageAlt: 'Colorful arrangement of fresh watermelon slices and citrus fruits representing fruity hookah flavors',
     quickAnswer: "The best hookah flavors for beginners are Mango, Watermelon, Peach, Blue Mist, Mint, Strawberry, Guava, Vanilla, Pineapple, and Love 66. These flavors are smooth, sweet, and approachable — all blonde leaf shisha, which is lighter and more forgiving. At Centerpiece, we guide every first-timer toward these flavors and away from intense dark leaf blends.",
     faqs: [
       {
@@ -1757,8 +1757,8 @@ export const blogPosts: BlogPost[] = [
     status: 'upcoming',
     author: 'Mina',
     updatedDate: '2026-12-13',
-    heroImage: 'https://images.pexels.com/photos/7518765/pexels-photo-7518765.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-    heroImageAlt: 'Premium hookahs arranged on a bar counter with ambient lighting',
+    heroImage: 'https://images.pexels.com/photos/4107134/pexels-photo-4107134.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    heroImageAlt: 'A woman carefully cleaning a glass vase with a cloth, representing hookah base maintenance',
     quickAnswer: "Clean your hookah after every session by rinsing the base with warm water, brushing the stem and bowl, and wiping the hose dry. A deep clean with lemon juice and baking soda every few sessions removes buildup that dulls flavor. Proper [hookah](https://en.wikipedia.org/wiki/Hookah) maintenance preserves flavor clarity, extends equipment life, and maintains [hygiene](https://en.wikipedia.org/wiki/Hygiene) when sharing with friends.",
     faqs: [
       {
@@ -2150,8 +2150,8 @@ export const blogPosts: BlogPost[] = [
     status: 'upcoming',
     author: 'Mina',
     updatedDate: '2026-12-27',
-    heroImage: 'https://images.pexels.com/photos/5923508/pexels-photo-5923508.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-    heroImageAlt: 'Two people sharing shisha pipes in a cozy hookah lounge setting',
+    heroImage: 'https://images.pexels.com/photos/18258470/pexels-photo-18258470.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    heroImageAlt: 'Two brown armchairs with decorative pillows in a cozy stylish interior representing the social setting of hookah etiquette',
     quickAnswer: "Hookah etiquette is about respect — for the pipe, the host, and the people sharing the session. The key rules: always pass the hose with the mouthpiece facing the receiver, never light a cigarette from the hookah coals, use disposable mouthpieces when sharing, tip your hookah server, and never blow smoke in someone's face. [Hookah](https://en.wikipedia.org/wiki/Hookah) is a centuries-old social tradition rooted in hospitality.",
     faqs: [
       {
@@ -2340,8 +2340,8 @@ export const blogPosts: BlogPost[] = [
     status: 'upcoming',
     author: 'Mina',
     updatedDate: '2027-01-03',
-    heroImage: 'https://images.pexels.com/photos/34250606/pexels-photo-34250606.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-    heroImageAlt: 'A close-up of a premium hookah with glowing coal against a bokeh light background',
+    heroImage: 'https://images.pexels.com/photos/35291216/pexels-photo-35291216.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    heroImageAlt: 'Vibrant long exposure of Downtown Los Angeles skyscrapers at night showcasing the LA city skyline',
     quickAnswer: "The best hookah lounges in [Los Angeles](https://en.wikipedia.org/wiki/Los_Angeles) share six qualities: premium equipment, diverse [shisha tobacco](https://en.wikipedia.org/wiki/Mu%27assel) from multiple countries, natural [coconut coals](https://en.wikipedia.org/wiki/Coconut_charcoal), skilled hookah masters, a thoughtful atmosphere, and mood-based flavor curation. This guide covers what to look for in an LA lounge and why Centerpiece in [Westwood](https://en.wikipedia.org/wiki/Westwood,_Los_Angeles) fits the bill — without naming, ranking, or criticizing other lounges.",
     faqs: [
       {
@@ -2526,8 +2526,8 @@ export const blogPosts: BlogPost[] = [
     status: 'upcoming',
     author: 'Mina',
     updatedDate: '2027-01-10',
-    heroImage: 'https://images.pexels.com/photos/16978580/pexels-photo-16978580.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-    heroImageAlt: 'A young man relaxing and smoking shisha at an indoor lounge surrounded by colorful hookahs',
+    heroImage: 'https://images.pexels.com/photos/17070296/pexels-photo-17070296.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    heroImageAlt: 'A young man studying on a laptop in a cozy cafe setting with ambient lighting, representing study-friendly lounge environments',
     quickAnswer: "Yes, you can study while smoking hookah. A study-friendly hookah lounge offers complimentary WiFi, comfortable seating, a quiet atmosphere, and flavors like mint or citrus that stay in the background without demanding attention. Many [UCLA](https://www.ucla.edu/) students in [Westwood](https://en.wikipedia.org/wiki/Westwood,_Los_Angeles) have traded coffee shops for hookah lounges because the environment is more relaxed and the seating is more comfortable. The key is choosing the right flavor and the right lounge.",
     faqs: [
       {
@@ -2714,8 +2714,8 @@ export const blogPosts: BlogPost[] = [
     status: 'upcoming',
     author: 'Mina',
     updatedDate: '2027-01-17',
-    heroImage: 'https://images.pexels.com/photos/7518749/pexels-photo-7518749.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-    heroImageAlt: 'Elegant hookahs displayed on a bar counter with warm bokeh lighting',
+    heroImage: 'https://images.pexels.com/photos/8250689/pexels-photo-8250689.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    heroImageAlt: 'A detailed close-up of a hand preparing a hookah bowl with traditional shisha tobacco mix',
     quickAnswer: "Shisha tobacco — also called [mu'assel](https://en.wikipedia.org/wiki/Mu%27assel), meaning 'honeyed' in Arabic — is made of four ingredients: [tobacco leaf](https://en.wikipedia.org/wiki/Tobacco), [molasses](https://en.wikipedia.org/wiki/Molasses) or honey, [glycerol](https://en.wikipedia.org/wiki/Glycerol), and [flavorings](https://en.wikipedia.org/wiki/Flavor). The tobacco provides the base, molasses acts as a binder and sweetener, glycerol produces thick clouds, and flavorings create the taste. Blonde leaf is washed during production; dark leaf is unwashed.",
     faqs: [
       {
@@ -2873,8 +2873,8 @@ export const blogPosts: BlogPost[] = [
     status: 'upcoming',
     author: 'Mina',
     updatedDate: '2027-01-24',
-    heroImage: 'https://images.pexels.com/photos/11945527/pexels-photo-11945527.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-    heroImageAlt: 'A person smoking hookah indoors with smoke and ambient lighting',
+    heroImage: 'https://images.pexels.com/photos/4411547/pexels-photo-4411547.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    heroImageAlt: 'Close-up of a lit hookah with smoke and glowing coals capturing the technique behind a smooth session',
     quickAnswer: "For a smoother hookah session: use natural [coconut coals](https://en.wikipedia.org/wiki/Coconut_charcoal), add ice to the base water, draw gently with long slow pulls, pack the bowl correctly for your tobacco type, use a heat management device like [Kaloud](https://www.kaloud.com/), keep the hose clean, and rotate coals every 20 to 30 minutes. These ten tips cover everything from heat management to water temperature.",
     faqs: [
       {
@@ -3047,8 +3047,8 @@ export const blogPosts: BlogPost[] = [
     status: 'upcoming',
     author: 'Mina',
     updatedDate: '2027-01-31',
-    heroImage: 'https://images.pexels.com/photos/4563736/pexels-photo-4563736.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-    heroImageAlt: 'A hookah pipe with drinks on a wooden table in a relaxed setting',
+    heroImage: 'https://images.pexels.com/photos/5900233/pexels-photo-5900233.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    heroImageAlt: 'Hands managing finances with a calculator cash and receipts on a wooden table representing hookah session pricing and budgeting',
     quickAnswer: "A hookah session at a lounge in [Los Angeles](https://en.wikipedia.org/wiki/Los_Angeles) typically ranges from $20 to $50+ per bowl, depending on equipment quality, shisha brand, location, and service level. Additional costs can include refills, coals, food, and drinks. Premium lounges charge more because they invest in better pipes, imported shisha, and skilled staff. This guide explains what affects the price and what you get for your money.",
     faqs: [
       {
@@ -3228,8 +3228,8 @@ export const blogPosts: BlogPost[] = [
     status: 'upcoming',
     author: 'Mina',
     updatedDate: '2027-02-07',
-    heroImage: 'https://images.pexels.com/photos/5192317/pexels-photo-5192317.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-    heroImageAlt: 'A person smoking hookah in a dimly lit bar with a relaxed nightlife ambiance',
+    heroImage: 'https://images.pexels.com/photos/7195179/pexels-photo-7195179.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    heroImageAlt: 'Fresh passion fruit and mint leaves arranged on a wooden tray representing diverse hookah flavor profiles',
     quickAnswer: "Hookah tastes like the [flavorings](https://en.wikipedia.org/wiki/Flavor) added to the [shisha tobacco](https://en.wikipedia.org/wiki/Mu%27assel) — which fall into five main categories: fruity (mango, watermelon, peach), minty (spearmint, peppermint), floral (rose, jasmine), earthy (double apple, spiced chai), and signature blends (Love 66, Blue Mist). The smoke is smooth, cool, and sweet, not harsh like cigarette smoke. Beginners typically start with fruity or minty flavors, which are the most approachable.",
     faqs: [
       {
@@ -3399,8 +3399,8 @@ export const blogPosts: BlogPost[] = [
     status: 'upcoming',
     author: 'Mina',
     updatedDate: '2027-02-14',
-    heroImage: 'https://images.pexels.com/photos/16978584/pexels-photo-16978584.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
-    heroImageAlt: 'A young man enjoying a hookah session in a modern lounge with vibrant decor',
+    heroImage: 'https://images.pexels.com/photos/16392255/pexels-photo-16392255.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    heroImageAlt: 'A neon sign reading Life is too short for bad HOOKAH in a chic hookah lounge representing hookah culture and equipment',
     quickAnswer: "When buying your first hookah, look for: a [stainless steel](https://en.wikipedia.org/wiki/Stainless_steel) stem for durability, a [borosilicate glass](https://en.wikipedia.org/wiki/Borosilicate_glass) base for clarity, a washable hose for easy cleaning, a medium size (18 to 24 inches) for versatility, and a standard Egyptian or phunnel bowl. Avoid cheap pipes with brass stems, non-washable hoses, and thin glass. Brands like [Wookah](https://wookah.pl/en/) and Alpha Hookah are the gold standard.",
     faqs: [
       {
