@@ -207,7 +207,7 @@ export const blogPosts: BlogPost[] = [
     keywords: ['how to choose hookah flavor', 'hookah flavor for your mood', 'mood-based shisha curation', 'which hookah flavor should I get', 'best hookah flavor for relaxing', 'hookah flavor pairing guide'],
     publishDate: '2026-10-11',
     readTime: 8,
-    status: 'upcoming',
+    status: 'published',
     author: 'Mina',
     updatedDate: '2026-10-11',
     heroImage: 'https://images.pexels.com/photos/11945527/pexels-photo-11945527.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
