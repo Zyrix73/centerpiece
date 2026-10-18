@@ -369,7 +369,7 @@ export const blogPosts: BlogPost[] = [
     keywords: ['how to pack a hookah bowl', 'hookah bowl packing technique', 'fluff pack vs dense pack', 'how to pack shisha', 'hookah bowl packing guide', 'best way to pack hookah bowl'],
     publishDate: '2026-10-18',
     readTime: 8,
-    status: 'upcoming',
+    status: 'published',
     author: 'Mina',
     updatedDate: '2026-10-18',
     heroImage: 'https://images.pexels.com/photos/34250606/pexels-photo-34250606.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
