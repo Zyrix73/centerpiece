@@ -528,7 +528,7 @@ export const blogPosts: BlogPost[] = [
     keywords: ['how to set up a hookah', 'hookah setup step by step', 'how to prepare a hookah', 'how to use a hookah pipe', 'hookah setup for beginners', 'how to light hookah coals'],
     publishDate: '2026-10-25',
     readTime: 8,
-    status: 'upcoming',
+    status: 'published',
     author: 'Mina',
     updatedDate: '2026-10-25',
     heroImage: 'https://images.pexels.com/photos/7518749/pexels-photo-7518749.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
