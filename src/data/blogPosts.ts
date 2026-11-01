@@ -708,7 +708,7 @@ export const blogPosts: BlogPost[] = [
     keywords: ['history of hookah', 'origin of hookah', 'where did hookah originate', 'hookah history persia india', 'shisha cultural tradition', 'evolution of water pipe'],
     publishDate: '2026-11-01',
     readTime: 8,
-    status: 'upcoming',
+    status: 'published',
     author: 'Mina',
     updatedDate: '2026-11-01',
     heroImage: 'https://images.pexels.com/photos/4563736/pexels-photo-4563736.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
