@@ -869,7 +869,7 @@ export const blogPosts: BlogPost[] = [
     keywords: ['how long does hookah last', 'hookah session length', 'how long to smoke hookah', 'what makes a good hookah session', 'how to make hookah last longer', 'hookah session tips'],
     publishDate: '2026-11-08',
     readTime: 5,
-    status: 'upcoming',
+    status: 'published',
     author: 'Mina',
     updatedDate: '2026-11-08',
     heroImage: 'https://images.pexels.com/photos/16978584/pexels-photo-16978584.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
