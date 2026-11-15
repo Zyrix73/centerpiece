@@ -1027,7 +1027,7 @@ export const blogPosts: BlogPost[] = [
     keywords: ['coconut coals vs quick light', 'best hookah coals', 'natural coconut charcoal hookah', 'quick light coals flavor', 'hookah coal comparison', 'natural vs quick light coals', 'coconut charcoal benefits'],
     publishDate: '2026-11-15',
     readTime: 6,
-    status: 'upcoming',
+    status: 'published',
     author: 'Mina',
     updatedDate: '2026-11-15',
     heroImage: 'https://images.pexels.com/photos/12568621/pexels-photo-12568621.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
